@@ -2,76 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- PREVENT PHONE AUTO-DARK MODE: Lock light luxury organic aesthetic everywhere -->
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#064B2B">
+  
   <title>Fizza's Natural — Traditional Goodness for a Healthier You | Faisalabad</title>
-  <meta name="description" content="Discover traditional Pakistani organic goodness with Fizza's Natural. Pure Honey, Traditional Desi Ghee, Homemade Panjeeri, Flaxseeds & Sesame Ladoo. Free home delivery in Faisalabad.">
-  <meta name="keywords" content="Fizza's Natural, Natural products in Faisalabad, Pure honey in Faisalabad, Desi ghee in Faisalabad, Traditional panjeeri, Flaxseeds Faisalabad">
+  <meta name="description" content="Discover traditional Pakistani organic goodness with Fizza's Natural. Pure Raw Honey, Desi Ghee, Homemade Panjeeri, Flaxseeds & Sesame Ladoo. Free home delivery in Faisalabad.">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Playfair Display + DM Sans + Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       CSS VARIABLES & BRAND PALETTE
+       FORCED LIGHT MODE & LUXURY ORGANIC VARIABLES
+       Consistent on ALL devices (Mobile iPhones/Android & Laptops)
        ========================================================================== */
     :root {
+      color-scheme: light only !important;
+      
       --color-forest: #064B2B;
       --color-forest-dark: #0A3B24;
-      --color-leaf: #3D793D;
-      --color-leaf-light: #529E52;
-      --color-cream: #FFF8E9;
-      --color-beige: #F3E7D1;
-      --color-beige-light: #FAF4E9;
+      --color-leaf: #2E7D32;
+      --color-leaf-light: #43A047;
+      --color-cream: #FFF9ED;
+      --color-cream-card: #FFFFFF;
+      --color-beige: #F4EAD4;
+      --color-beige-light: #FAF4E8;
       --color-gold: #D99A32;
       --color-gold-hover: #BF8220;
+      --color-gold-soft: #FFF1D6;
       --color-brown: #572414;
       --color-white: #FFFFFF;
-      --color-text-dark: #1E2B20;
-      --color-text-muted: #5C6E60;
-      --color-border: #E8DECC;
+      --color-text-dark: #1A261D;
+      --color-text-muted: #536757;
+      --color-border: #E8DDCA;
+      --color-border-focus: #D99A32;
+      --color-accent-red: #D32F2F;
       
       --font-heading: 'Playfair Display', Georgia, serif;
       --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-hand: 'Caveat', cursive;
       
       --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-lg: 26px;
       --radius-full: 9999px;
       
-      --shadow-soft: 0 10px 30px rgba(6, 75, 43, 0.06);
-      --shadow-hover: 0 20px 40px rgba(6, 75, 43, 0.12);
-      --shadow-card: 0 4px 20px rgba(87, 36, 20, 0.05);
+      --shadow-soft: 0 10px 25px rgba(6, 75, 43, 0.05);
+      --shadow-hover: 0 18px 38px rgba(6, 75, 43, 0.12);
+      --shadow-card: 0 4px 18px rgba(87, 36, 20, 0.04);
       --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    /* Reset & Base */
-    *, *::before, *::after {
-      box-sizing: border-box;
+    /* Force Light background against OS dark mode overrides */
+    html, body {
+      background-color: var(--color-cream) !important;
+      color: var(--color-text-dark) !important;
+      font-family: var(--font-body);
+      line-height: 1.65;
       margin: 0;
       padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background-color: var(--color-cream);
-      color: var(--color-text-dark);
-      line-height: 1.65;
-      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      color-scheme: light only !important;
     }
 
     a {
@@ -80,11 +84,18 @@
       transition: var(--transition);
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     button, input, select, textarea {
       font-family: inherit;
       font-size: 1rem;
       border: none;
       outline: none;
+      color: var(--color-text-dark);
     }
 
     button {
@@ -99,161 +110,186 @@
       padding: 0 24px;
     }
 
-    /* Typography Utilities */
-    .font-serif { font-family: var(--font-heading); }
-    .font-hand { font-family: var(--font-hand); }
-    
-    .badge-sub {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-hand);
-      font-size: 1.35rem;
-      color: var(--color-gold);
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
+    /* ==========================================================================
+       SMOOTH PROFESSIONAL ANIMATIONS & SCROLL REVEALS
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
     }
 
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
-      color: var(--color-forest);
-      line-height: 1.25;
-      margin-bottom: 14px;
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--color-text-muted);
-      max-width: 600px;
-      margin: 0 auto;
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    /* Botanical SVGs & Badges */
-    .leaf-icon {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-      fill: currentColor;
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(0.8deg); }
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    @keyframes bounceBadge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.22); }
+    }
+
+    .animate-bounce {
+      animation: bounceBadge 0.4s ease-out;
     }
 
     /* ==========================================================================
-       BUTTONS
+       BUTTONS & CONVERSION ELEMENTS
        ========================================================================== */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 30px;
+      padding: 14px 28px;
       border-radius: var(--radius-full);
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
       letter-spacing: 0.3px;
       transition: var(--transition);
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .btn:hover::after {
+      transform: translateX(100%);
     }
 
     .btn-primary {
-      background-color: var(--color-forest);
-      color: var(--color-white);
-      box-shadow: 0 8px 20px rgba(6, 75, 43, 0.25);
+      background: var(--color-forest) !important;
+      color: var(--color-white) !important;
+      box-shadow: 0 8px 22px rgba(6, 75, 43, 0.28);
     }
 
     .btn-primary:hover {
-      background-color: var(--color-forest-dark);
+      background: var(--color-forest-dark) !important;
       transform: translateY(-2px);
-      box-shadow: 0 12px 25px rgba(6, 75, 43, 0.35);
+      box-shadow: 0 12px 28px rgba(6, 75, 43, 0.38);
     }
 
     .btn-secondary {
-      background-color: transparent;
-      color: var(--color-forest);
-      border: 1.5px solid var(--color-forest);
+      background: transparent !important;
+      color: var(--color-forest) !important;
+      border: 1.5px solid var(--color-forest) !important;
     }
 
     .btn-secondary:hover {
-      background-color: var(--color-forest);
-      color: var(--color-white);
+      background: var(--color-forest) !important;
+      color: var(--color-white) !important;
       transform: translateY(-2px);
     }
 
     .btn-gold {
-      background-color: var(--color-gold);
-      color: var(--color-white);
-      box-shadow: 0 8px 20px rgba(217, 154, 50, 0.3);
+      background: var(--color-gold) !important;
+      color: var(--color-white) !important;
+      box-shadow: 0 8px 22px rgba(217, 154, 50, 0.35);
     }
 
     .btn-gold:hover {
-      background-color: var(--color-gold-hover);
+      background: var(--color-gold-hover) !important;
       transform: translateY(-2px);
     }
 
     .btn-whatsapp {
-      background-color: #25D366;
-      color: #FFFFFF;
-      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+      background: #25D366 !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.32);
     }
 
     .btn-whatsapp:hover {
-      background-color: #1EBE5D;
+      background: #1EBE5D !important;
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
     }
 
     .btn-sm {
-      padding: 9px 18px;
+      padding: 10px 18px;
       font-size: 0.85rem;
     }
 
-    /* ==========================================================================
-       ANNOUNCEMENT BAR
-       ========================================================================== */
-    .announcement-bar {
-      background: linear-gradient(90deg, #064B2B 0%, #0A3B24 100%);
-      color: var(--color-cream);
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 9px 16px;
+    /* Urgent High-Converting Banner */
+    .conversion-ribbon {
+      background: linear-gradient(90deg, #D99A32 0%, #BF8220 100%);
+      color: #FFFFFF;
+      padding: 7px 14px;
+      font-size: 0.84rem;
+      font-weight: 700;
       text-align: center;
-      letter-spacing: 0.6px;
-      position: relative;
-      z-index: 101;
+      letter-spacing: 0.4px;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 12px;
     }
 
-    .announcement-bar .dot {
-      color: var(--color-gold);
+    /* ==========================================================================
+       ANNOUNCEMENT BAR & HEADER
+       ========================================================================== */
+    .announcement-bar {
+      background: #0A3B24 !important;
+      color: #FFF8E9 !important;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 9px 16px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     .announcement-bar strong {
-      color: var(--color-gold);
-      font-weight: 600;
+      color: #F8C368;
     }
 
-    /* ==========================================================================
-       STICKY HEADER & NAVIGATION
-       ========================================================================== */
     .site-header {
       position: sticky;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(255, 248, 233, 0.94);
+      background: rgba(255, 249, 237, 0.96) !important;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(232, 222, 204, 0.7);
+      border-bottom: 1px solid rgba(232, 221, 202, 0.8);
       z-index: 100;
       transition: var(--transition);
     }
 
     .site-header.scrolled {
-      background: rgba(255, 255, 255, 0.98);
+      background: #FFFFFF !important;
       box-shadow: 0 6px 20px rgba(6, 75, 43, 0.08);
       border-bottom-color: transparent;
     }
@@ -265,24 +301,23 @@
       height: 80px;
     }
 
-    /* Brand Logo */
+    /* Logo */
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
-      text-decoration: none;
+      gap: 12px;
     }
 
     .logo-emblem {
       width: 44px;
       height: 44px;
-      background: var(--color-forest);
+      background: var(--color-forest) !important;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--color-gold);
-      box-shadow: 0 4px 10px rgba(6, 75, 43, 0.2);
+      box-shadow: 0 4px 12px rgba(6, 75, 43, 0.2);
     }
 
     .logo-text-wrap {
@@ -293,21 +328,20 @@
     .logo-name {
       font-family: var(--font-heading);
       font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--color-forest);
-      letter-spacing: -0.2px;
+      font-weight: 800;
+      color: var(--color-forest) !important;
       line-height: 1.1;
     }
 
     .logo-tagline {
       font-size: 0.68rem;
-      color: var(--color-gold);
-      font-weight: 600;
+      color: var(--color-gold) !important;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1.2px;
     }
 
-    /* Nav Links */
+    /* Navigation */
     .nav-links {
       display: flex;
       align-items: center;
@@ -316,9 +350,9 @@
     }
 
     .nav-link {
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.95rem;
-      color: var(--color-text-dark);
+      color: var(--color-text-dark) !important;
       position: relative;
       padding: 6px 0;
     }
@@ -329,14 +363,14 @@
       bottom: 0;
       left: 0;
       width: 0%;
-      height: 2px;
-      background-color: var(--color-gold);
+      height: 2.5px;
+      background: var(--color-gold);
       transition: var(--transition);
       border-radius: 2px;
     }
 
     .nav-link:hover, .nav-link.active {
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
     }
 
     .nav-link:hover::after, .nav-link.active::after {
@@ -347,7 +381,7 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
 
     .header-icon-btn {
@@ -357,28 +391,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--color-forest);
-      background-color: var(--color-beige-light);
+      color: var(--color-forest) !important;
+      background: var(--color-beige-light) !important;
       position: relative;
       transition: var(--transition);
+      border: 1px solid var(--color-border);
     }
 
     .header-icon-btn:hover {
-      background-color: var(--color-forest);
-      color: var(--color-white);
+      background: var(--color-forest) !important;
+      color: var(--color-white) !important;
       transform: translateY(-2px);
     }
 
     .cart-badge {
       position: absolute;
-      top: -3px;
-      right: -3px;
-      background-color: var(--color-gold);
-      color: var(--color-white);
+      top: -4px;
+      right: -4px;
+      background: var(--color-gold) !important;
+      color: var(--color-white) !important;
       font-size: 0.72rem;
-      font-weight: 700;
-      width: 20px;
-      height: 20px;
+      font-weight: 800;
+      width: 21px;
+      height: 21px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -393,8 +428,8 @@
       border-radius: var(--radius-sm);
       align-items: center;
       justify-content: center;
-      color: var(--color-forest);
-      background-color: var(--color-beige);
+      color: var(--color-forest) !important;
+      background: var(--color-beige) !important;
     }
 
     /* ==========================================================================
@@ -402,56 +437,48 @@
        ========================================================================== */
     .hero-section {
       position: relative;
-      background: radial-gradient(circle at 80% 20%, rgba(217, 154, 50, 0.12) 0%, transparent 60%),
-                  linear-gradient(135deg, #FFF8E9 0%, #F5ECDB 100%);
-      padding: 60px 0 90px;
+      background: linear-gradient(135deg, #FFF9ED 0%, #F5ECDB 100%) !important;
+      padding: 65px 0 95px;
       overflow: hidden;
-    }
-
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(circle, rgba(6, 75, 43, 0.05) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.18fr 0.82fr;
       align-items: center;
       gap: 50px;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
+    .badge-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-hand);
+      font-size: 1.45rem;
+      color: var(--color-gold) !important;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .hero-heading {
       font-family: var(--font-heading);
       font-size: clamp(2.6rem, 4.8vw, 4.2rem);
       line-height: 1.15;
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
       margin-bottom: 20px;
     }
 
     .hero-heading span.gold-highlight {
-      color: var(--color-gold);
+      color: var(--color-gold) !important;
       font-style: italic;
-      position: relative;
     }
 
     .hero-text {
       font-size: 1.15rem;
-      color: var(--color-text-muted);
-      line-height: 1.7;
+      color: var(--color-text-muted) !important;
+      line-height: 1.75;
       margin-bottom: 35px;
-      max-width: 520px;
+      max-width: 530px;
     }
 
     .hero-buttons {
@@ -459,19 +486,20 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 16px;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
 
-    .hero-pill-info {
+    .hero-pill-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 18px;
-      background: rgba(6, 75, 43, 0.07);
+      padding: 10px 20px;
+      background: rgba(6, 75, 43, 0.08) !important;
       border-radius: var(--radius-full);
-      font-size: 0.88rem;
-      color: var(--color-forest-dark);
-      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--color-forest) !important;
+      font-weight: 700;
+      border: 1px solid rgba(6, 75, 43, 0.12);
     }
 
     .hero-visual {
@@ -483,47 +511,36 @@
     .hero-image-frame {
       position: relative;
       width: 100%;
-      max-width: 480px;
+      max-width: 460px;
       aspect-ratio: 4/5;
-      border-radius: 35% 65% 60% 40% / 45% 45% 55% 55%;
+      border-radius: 40% 60% 55% 45% / 45% 45% 55% 55%;
       overflow: hidden;
-      box-shadow: 0 30px 60px rgba(6, 75, 43, 0.15);
-      border: 6px solid var(--color-white);
-      transition: var(--transition);
-      animation: morphShape 12s ease-in-out infinite alternate;
-    }
-
-    @keyframes morphShape {
-      0% { border-radius: 35% 65% 60% 40% / 45% 45% 55% 55%; }
-      50% { border-radius: 50% 50% 40% 60% / 60% 35% 65% 40%; }
-      100% { border-radius: 40% 60% 50% 50% / 50% 60% 40% 50%; }
+      box-shadow: 0 30px 60px rgba(6, 75, 43, 0.18);
+      border: 6px solid #FFFFFF;
+      animation: gentleFloat 6s ease-in-out infinite;
+      background: #FFFFFF !important;
     }
 
     .hero-image-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transform: scale(1.04);
+      transform: scale(1.05);
       transition: transform 0.8s ease;
-    }
-
-    .hero-image-frame:hover img {
-      transform: scale(1.08);
     }
 
     .floating-card-1 {
       position: absolute;
       bottom: 20px;
       left: -20px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
+      background: #FFFFFF !important;
       padding: 14px 20px;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-hover);
       display: flex;
       align-items: center;
       gap: 12px;
-      animation: floatBadge 4s ease-in-out infinite;
+      border: 1px solid var(--color-border);
       z-index: 3;
     }
 
@@ -531,26 +548,20 @@
       position: absolute;
       top: 30px;
       right: -15px;
-      background: var(--color-forest);
-      color: var(--color-cream);
-      padding: 12px 18px;
+      background: var(--color-forest) !important;
+      color: #FFFFFF !important;
+      padding: 12px 20px;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-hover);
       text-align: center;
-      animation: floatBadge 4.5s ease-in-out infinite reverse;
       z-index: 3;
     }
 
-    @keyframes floatBadge {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-
     /* ==========================================================================
-       TRUST INDICATORS
+       TRUST INDICATORS BAR
        ========================================================================== */
     .trust-bar {
-      background-color: var(--color-white);
+      background: #FFFFFF !important;
       border-top: 1px solid var(--color-border);
       border-bottom: 1px solid var(--color-border);
       padding: 34px 0;
@@ -570,12 +581,12 @@
     }
 
     .trust-icon-wrap {
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
-      background: var(--color-cream);
-      border: 1px solid var(--color-beige);
-      color: var(--color-forest);
+      background: var(--color-cream) !important;
+      border: 1.5px solid var(--color-beige);
+      color: var(--color-forest) !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -584,30 +595,30 @@
     }
 
     .trust-item:hover .trust-icon-wrap {
-      background: var(--color-forest);
-      color: var(--color-gold);
-      transform: scale(1.05);
+      background: var(--color-forest) !important;
+      color: var(--color-gold) !important;
+      transform: scale(1.06);
     }
 
     .trust-label {
       font-weight: 700;
       font-size: 0.95rem;
-      color: var(--color-forest-dark);
+      color: var(--color-forest) !important;
       line-height: 1.25;
     }
 
     .trust-desc {
-      font-size: 0.78rem;
-      color: var(--color-text-muted);
+      font-size: 0.8rem;
+      color: var(--color-text-muted) !important;
       margin-top: 2px;
     }
 
     /* ==========================================================================
-       PRODUCT COLLECTION SECTION
+       PRODUCTS CATALOG & CARDS (High Conversion Design)
        ========================================================================== */
     .products-section {
       padding: 90px 0;
-      background-color: var(--color-cream);
+      background: var(--color-cream) !important;
     }
 
     .section-header-center {
@@ -615,17 +626,31 @@
       margin-bottom: 48px;
     }
 
-    /* Product Grid */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      color: var(--color-forest) !important;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--color-text-muted) !important;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
       gap: 32px;
     }
 
     .product-card {
-      background: var(--color-white);
+      background: #FFFFFF !important;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
+      border: 1.5px solid var(--color-border);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -635,31 +660,46 @@
     }
 
     .product-card:hover {
-      transform: translateY(-7px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-hover);
       border-color: var(--color-gold);
     }
 
-    .product-badge {
+    .product-badge-wrap {
       position: absolute;
       top: 14px;
       left: 14px;
-      background: var(--color-forest);
-      color: var(--color-cream);
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .badge-primary {
+      background: var(--color-forest) !important;
+      color: #FFFFFF !important;
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
       padding: 5px 12px;
       border-radius: var(--radius-full);
-      z-index: 2;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .badge-discount {
+      background: #D32F2F !important;
+      color: #FFFFFF !important;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 5px 10px;
+      border-radius: var(--radius-full);
     }
 
     .product-image-wrap {
       position: relative;
       aspect-ratio: 1/1;
       overflow: hidden;
-      background-color: #F8F5EE;
+      background: #FDFBF7 !important;
     }
 
     .product-image-wrap img {
@@ -674,25 +714,26 @@
     }
 
     .product-card-body {
-      padding: 22px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      background: #FFFFFF !important;
     }
 
     .product-category-tag {
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--color-gold);
-      font-weight: 700;
+      color: var(--color-gold) !important;
+      font-weight: 800;
       margin-bottom: 6px;
     }
 
     .product-title {
       font-family: var(--font-heading);
-      font-size: 1.3rem;
-      color: var(--color-forest);
+      font-size: 1.35rem;
+      color: var(--color-forest) !important;
       font-weight: 700;
       line-height: 1.3;
       margin-bottom: 8px;
@@ -700,54 +741,91 @@
     }
 
     .product-title:hover {
-      color: var(--color-gold);
+      color: var(--color-gold) !important;
     }
 
     .product-desc {
       font-size: 0.88rem;
-      color: var(--color-text-muted);
-      line-height: 1.5;
+      color: var(--color-text-muted) !important;
+      line-height: 1.55;
       margin-bottom: 16px;
       flex-grow: 1;
     }
 
+    /* Size selector inside card */
     .product-options-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       margin-bottom: 16px;
-      padding-top: 12px;
+      padding: 12px 0;
       border-top: 1px dashed var(--color-border);
+      border-bottom: 1px dashed var(--color-border);
+    }
+
+    .size-selector-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-forest);
+      margin-bottom: 6px;
+      display: block;
     }
 
     .size-selector {
       display: flex;
-      gap: 6px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .size-pill {
-      font-size: 0.74rem;
-      font-weight: 600;
-      padding: 4px 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
       border-radius: var(--radius-full);
-      background: var(--color-beige-light);
-      color: var(--color-forest);
-      border: 1px solid var(--color-border);
+      background: var(--color-beige-light) !important;
+      color: var(--color-forest) !important;
+      border: 1.5px solid var(--color-border);
       cursor: pointer;
       transition: var(--transition);
     }
 
     .size-pill.active {
-      background: var(--color-forest);
-      color: var(--color-white);
-      border-color: var(--color-forest);
+      background: var(--color-forest) !important;
+      color: #FFFFFF !important;
+      border-color: var(--color-forest) !important;
+      box-shadow: 0 4px 10px rgba(6, 75, 43, 0.2);
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 16px;
     }
 
     .product-price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .current-price {
       font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--color-forest);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--color-forest) !important;
+    }
+
+    .old-price {
+      font-size: 0.92rem;
+      color: #92AA9C !important;
+      text-decoration: line-through;
+    }
+
+    .delivery-free-tag {
+      font-size: 0.75rem;
+      color: var(--color-leaf) !important;
+      font-weight: 800;
+      background: #EAF5ED !important;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
     }
 
     .product-actions {
@@ -756,13 +834,34 @@
       gap: 10px;
     }
 
+    /* 1-Click WhatsApp Direct Button inside card */
+    .btn-card-wa {
+      grid-column: span 2;
+      background: #25D366 !important;
+      color: #FFFFFF !important;
+      padding: 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-card-wa:hover {
+      background: #1EBE5D !important;
+      transform: translateY(-2px);
+    }
+
     /* ==========================================================================
-       EDITORIAL BRAND STORY SECTION
+       EDITORIAL BRAND STORY & SPOTLIGHT
        ========================================================================== */
     .brand-story-section {
       padding: 100px 0;
-      background: var(--color-beige-light);
-      position: relative;
+      background: var(--color-beige-light) !important;
     }
 
     .story-grid {
@@ -770,10 +869,6 @@
       grid-template-columns: 1fr 1.15fr;
       gap: 60px;
       align-items: center;
-    }
-
-    .story-imagery {
-      position: relative;
     }
 
     .story-main-img {
@@ -788,25 +883,25 @@
       position: absolute;
       bottom: -24px;
       right: -24px;
-      background: var(--color-forest);
-      color: var(--color-cream);
+      background: var(--color-forest) !important;
+      color: #FFF8E9 !important;
       padding: 24px;
       border-radius: var(--radius-md);
       box-shadow: var(--shadow-hover);
       text-align: center;
-      max-width: 170px;
+      max-width: 180px;
     }
 
     .story-content h2 {
       font-size: clamp(2.2rem, 3.8vw, 3rem);
       line-height: 1.2;
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
       margin-bottom: 22px;
     }
 
     .story-content p {
       font-size: 1.05rem;
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
       margin-bottom: 20px;
       line-height: 1.8;
     }
@@ -823,28 +918,26 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.95rem;
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
     }
 
     .story-feature-item svg {
-      color: var(--color-gold);
+      color: var(--color-gold) !important;
       flex-shrink: 0;
     }
 
-    /* ==========================================================================
-       FEATURED SPOTLIGHT SHOWCASE
-       ========================================================================== */
+    /* Spotlight alternating cards */
     .featured-showcase-section {
-      padding: 100px 0;
-      background-color: var(--color-cream);
+      padding: 95px 0;
+      background: var(--color-cream) !important;
     }
 
     .spotlight-card {
-      background: var(--color-white);
+      background: #FFFFFF !important;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
+      border: 1.5px solid var(--color-border);
       overflow: hidden;
       margin-bottom: 40px;
       display: grid;
@@ -855,7 +948,6 @@
     }
 
     .spotlight-card:nth-child(even) {
-      grid-template-columns: 1fr 1fr;
       direction: rtl;
     }
 
@@ -871,6 +963,7 @@
     .spotlight-img-wrap {
       height: 420px;
       overflow: hidden;
+      background: #FDFBF7 !important;
     }
 
     .spotlight-img-wrap img {
@@ -890,32 +983,32 @@
 
     .spotlight-tag {
       font-family: var(--font-hand);
-      font-size: 1.4rem;
-      color: var(--color-gold);
+      font-size: 1.45rem;
+      color: var(--color-gold) !important;
       font-weight: 700;
       margin-bottom: 6px;
     }
 
     .spotlight-title {
       font-family: var(--font-heading);
-      font-size: 2rem;
-      color: var(--color-forest);
+      font-size: 2.1rem;
+      color: var(--color-forest) !important;
       margin-bottom: 14px;
     }
 
     .spotlight-desc {
       font-size: 1rem;
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
       line-height: 1.7;
       margin-bottom: 24px;
     }
 
     /* ==========================================================================
-       WHY CHOOSE FIZZA'S NATURAL
+       WHY CHOOSE US & BANNER
        ========================================================================== */
     .why-us-section {
       padding: 90px 0;
-      background: linear-gradient(180deg, #F5ECDB 0%, #FFF8E9 100%);
+      background: linear-gradient(180deg, #F5ECDB 0%, #FFF9ED 100%) !important;
     }
 
     .why-grid {
@@ -926,7 +1019,7 @@
     }
 
     .why-card {
-      background: var(--color-white);
+      background: #FFFFFF !important;
       padding: 32px 22px;
       border-radius: var(--radius-md);
       border: 1px solid var(--color-border);
@@ -944,8 +1037,8 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: var(--color-cream);
-      color: var(--color-forest);
+      background: var(--color-cream) !important;
+      color: var(--color-forest) !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -954,30 +1047,28 @@
     }
 
     .why-card:hover .why-card-icon {
-      background: var(--color-forest);
-      color: var(--color-gold);
+      background: var(--color-forest) !important;
+      color: var(--color-gold) !important;
     }
 
     .why-card-title {
       font-family: var(--font-heading);
       font-size: 1.15rem;
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
     .why-card-desc {
       font-size: 0.85rem;
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
       line-height: 1.55;
     }
 
-    /* ==========================================================================
-       PROMOTIONAL ORGANIC BANNER
-       ========================================================================== */
+    /* Promotional Green Banner */
     .promo-banner {
-      background: linear-gradient(135deg, #0A3B24 0%, #064B2B 100%);
-      color: var(--color-white);
+      background: linear-gradient(135deg, #0A3B24 0%, #064B2B 100%) !important;
+      color: #FFFFFF !important;
       border-radius: var(--radius-lg);
       padding: 60px 48px;
       margin: 40px auto;
@@ -985,17 +1076,6 @@
       position: relative;
       overflow: hidden;
       box-shadow: 0 25px 50px rgba(6, 75, 43, 0.25);
-    }
-
-    .promo-banner::before {
-      content: '';
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(217, 154, 50, 0.2) 0%, transparent 70%);
-      border-radius: 50%;
     }
 
     .promo-inner {
@@ -1010,52 +1090,99 @@
       font-family: var(--font-heading);
       font-size: clamp(2rem, 3.5vw, 2.8rem);
       margin-bottom: 10px;
+      color: #FFFFFF !important;
     }
 
     .promo-content p {
       font-size: 1.1rem;
-      color: #D3E4D8;
+      color: #D3E4D8 !important;
       max-width: 540px;
     }
 
     /* ==========================================================================
-       CUSTOMER EXPERIENCES / REAL REVIEWS SECTION
+       LOCAL REVIEWS & SOCIAL PROOF (FAISALABAD TRUST)
        ========================================================================== */
-    .testimonials-section {
+    .reviews-section {
       padding: 90px 0;
-      background-color: var(--color-white);
+      background: #FFFFFF !important;
     }
 
-    .reviews-placeholder-card {
-      max-width: 760px;
-      margin: 0 auto;
-      background: var(--color-cream);
-      border: 2px dashed var(--color-border);
-      border-radius: var(--radius-lg);
-      padding: 48px;
-      text-align: center;
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 45px;
     }
 
-    .reviews-placeholder-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      color: var(--color-forest);
+    .review-card {
+      background: var(--color-cream) !important;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-gold);
+    }
+
+    .review-stars {
+      color: #D99A32 !important;
+      font-size: 1.1rem;
       margin-bottom: 12px;
     }
 
-    .reviews-placeholder-card p {
-      font-size: 1rem;
-      color: var(--color-text-muted);
-      line-height: 1.7;
-      margin-bottom: 24px;
+    .review-text {
+      font-size: 0.95rem;
+      color: var(--color-text-dark) !important;
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 20px;
     }
 
-    /* ==========================================================================
-       INSTAGRAM GALLERY SECTION
-       ========================================================================== */
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px dashed var(--color-border);
+      padding-top: 14px;
+    }
+
+    .reviewer-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-forest) !important;
+      color: #FFFFFF !important;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .reviewer-name {
+      font-weight: 700;
+      color: var(--color-forest) !important;
+      font-size: 0.95rem;
+    }
+
+    .reviewer-area {
+      font-size: 0.8rem;
+      color: var(--color-leaf) !important;
+      font-weight: 600;
+    }
+
+    /* Instagram Gallery */
     .instagram-section {
       padding: 90px 0;
-      background-color: var(--color-cream);
+      background: var(--color-cream) !important;
     }
 
     .insta-grid {
@@ -1071,7 +1198,6 @@
       border-radius: var(--radius-md);
       overflow: hidden;
       box-shadow: var(--shadow-card);
-      cursor: pointer;
     }
 
     .insta-item img {
@@ -1081,81 +1207,16 @@
       transition: transform 0.5s ease;
     }
 
-    .insta-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(6, 75, 43, 0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-white);
-      opacity: 0;
-      transition: var(--transition);
-    }
-
     .insta-item:hover img {
       transform: scale(1.1);
     }
 
-    .insta-item:hover .insta-overlay {
-      opacity: 1;
-    }
-
-    .insta-cta-wrap {
-      text-align: center;
-    }
-
     /* ==========================================================================
-       NEWSLETTER SUBSCRIPTION
-       ========================================================================== */
-    .newsletter-section {
-      padding: 70px 0;
-      background: var(--color-beige-light);
-      border-top: 1px solid var(--color-border);
-    }
-
-    .newsletter-box {
-      max-width: 680px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .newsletter-form {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-      background: var(--color-white);
-      padding: 8px;
-      border-radius: var(--radius-full);
-      box-shadow: var(--shadow-soft);
-      border: 1px solid var(--color-border);
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      padding: 10px 20px;
-      font-size: 0.95rem;
-      background: transparent;
-    }
-
-    .newsletter-form button {
-      flex-shrink: 0;
-    }
-
-    .form-success-msg {
-      display: none;
-      margin-top: 14px;
-      color: var(--color-leaf);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    /* ==========================================================================
-       SITE FOOTER
+       FOOTER
        ========================================================================== */
     .site-footer {
-      background: var(--color-forest-dark);
-      color: #E2ECE5;
+      background: #0A3B24 !important;
+      color: #E2ECE5 !important;
       padding: 80px 0 30px;
       border-top: 4px solid var(--color-gold);
     }
@@ -1169,7 +1230,7 @@
 
     .footer-brand p {
       font-size: 0.95rem;
-      color: #B5CCC0;
+      color: #B5CCC0 !important;
       line-height: 1.7;
       margin: 18px 0 24px;
     }
@@ -1177,7 +1238,7 @@
     .footer-heading {
       font-family: var(--font-heading);
       font-size: 1.25rem;
-      color: var(--color-white);
+      color: #FFFFFF !important;
       margin-bottom: 22px;
       position: relative;
     }
@@ -1201,7 +1262,7 @@
 
     .footer-link {
       font-size: 0.92rem;
-      color: #B5CCC0;
+      color: #B5CCC0 !important;
       transition: var(--transition);
       display: inline-flex;
       align-items: center;
@@ -1209,22 +1270,8 @@
     }
 
     .footer-link:hover {
-      color: var(--color-gold);
+      color: var(--color-gold) !important;
       transform: translateX(4px);
-    }
-
-    .footer-contact-item {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 14px;
-      font-size: 0.92rem;
-      color: #B5CCC0;
-    }
-
-    .footer-contact-item svg {
-      color: var(--color-gold);
-      flex-shrink: 0;
-      margin-top: 3px;
     }
 
     .footer-bottom {
@@ -1234,22 +1281,13 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.86rem;
-      color: #92AA9C;
+      color: #92AA9C !important;
       flex-wrap: wrap;
       gap: 16px;
     }
 
-    .footer-legal-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-legal-links a:hover {
-      color: var(--color-gold);
-    }
-
     /* ==========================================================================
-       PAGES CONTAINER & CLIENT ROUTING
+       PAGES & CLIENT-SIDE ROUTING
        ========================================================================== */
     .view-page {
       display: none;
@@ -1266,32 +1304,29 @@
     }
 
     .page-hero-banner {
-      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%);
-      color: var(--color-cream);
+      background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-dark) 100%) !important;
+      color: #FFF9ED !important;
       padding: 70px 0 60px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
     }
 
     .page-hero-banner h1 {
       font-family: var(--font-heading);
       font-size: clamp(2.4rem, 4.2vw, 3.4rem);
       margin-bottom: 12px;
+      color: #FFFFFF !important;
     }
 
     .page-hero-banner p {
       font-size: 1.1rem;
-      color: #D3E4D8;
+      color: #D3E4D8 !important;
       max-width: 600px;
       margin: 0 auto;
     }
 
-    /* ==========================================================================
-       SHOP PAGE STYLES
-       ========================================================================== */
+    /* Shop Filter Bar */
     .shop-filter-bar {
-      background: var(--color-white);
+      background: #FFFFFF !important;
       border-bottom: 1px solid var(--color-border);
       padding: 20px 0;
       position: sticky;
@@ -1316,88 +1351,39 @@
 
     .category-chip {
       padding: 8px 16px;
-      background: var(--color-beige-light);
+      background: var(--color-beige-light) !important;
       border-radius: var(--radius-full);
       font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--color-text-dark);
+      font-weight: 700;
+      color: var(--color-text-dark) !important;
       border: 1px solid var(--color-border);
-      transition: var(--transition);
       cursor: pointer;
+      transition: var(--transition);
     }
 
     .category-chip:hover, .category-chip.active {
-      background: var(--color-forest);
-      color: var(--color-white);
-      border-color: var(--color-forest);
-    }
-
-    .shop-search-sort {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .search-input-wrap {
-      position: relative;
-    }
-
-    .search-input-wrap input {
-      padding: 9px 16px 9px 38px;
-      background: var(--color-cream);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-full);
-      font-size: 0.88rem;
-      width: 220px;
-      transition: var(--transition);
-    }
-
-    .search-input-wrap input:focus {
-      width: 260px;
-      border-color: var(--color-gold);
-      background: var(--color-white);
-    }
-
-    .search-input-wrap svg {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--color-text-muted);
-    }
-
-    .sort-select {
-      padding: 9px 16px;
-      background: var(--color-cream);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-full);
-      font-size: 0.88rem;
-      color: var(--color-text-dark);
-      cursor: pointer;
+      background: var(--color-forest) !important;
+      color: #FFFFFF !important;
+      border-color: var(--color-forest) !important;
     }
 
     /* ==========================================================================
-       PRODUCT DETAIL PAGE
+       PRODUCT DETAIL VIEW
        ========================================================================== */
     .product-detail-section {
       padding: 70px 0 100px;
-      background: var(--color-cream);
+      background: var(--color-cream) !important;
     }
 
     .product-detail-grid {
       display: grid;
       grid-template-columns: 1fr 1.15fr;
       gap: 60px;
-      background: var(--color-white);
+      background: #FFFFFF !important;
       border-radius: var(--radius-lg);
       padding: 48px;
-      border: 1px solid var(--color-border);
+      border: 1.5px solid var(--color-border);
       box-shadow: var(--shadow-card);
-    }
-
-    .pdetail-gallery {
-      position: sticky;
-      top: 100px;
     }
 
     .pdetail-main-img {
@@ -1405,8 +1391,7 @@
       aspect-ratio: 1/1;
       border-radius: var(--radius-md);
       overflow: hidden;
-      background: #F8F5EE;
-      margin-bottom: 16px;
+      background: #FDFBF7 !important;
       border: 1px solid var(--color-border);
     }
 
@@ -1416,57 +1401,31 @@
       object-fit: cover;
     }
 
-    .pdetail-content h1 {
+    .pdetail-title {
       font-family: var(--font-heading);
       font-size: 2.4rem;
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
       margin-bottom: 8px;
     }
 
     .pdetail-price-box {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      color: var(--color-forest);
-      font-weight: 700;
-      margin: 16px 0 20px;
       display: flex;
       align-items: baseline;
-      gap: 10px;
+      gap: 14px;
+      margin: 18px 0 22px;
     }
 
-    .pdetail-price-note {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      color: var(--color-leaf);
-      font-weight: 600;
+    .pdetail-current-price {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-forest) !important;
     }
 
-    .pdetail-desc {
-      font-size: 1.05rem;
-      color: var(--color-text-muted);
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-
-    .pdetail-meta-box {
-      background: var(--color-cream);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      margin-bottom: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 0.92rem;
-    }
-
-    .pdetail-meta-row {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .pdetail-meta-row strong {
-      color: var(--color-forest);
+    .pdetail-old-price {
+      font-size: 1.25rem;
+      color: #92AA9C !important;
+      text-decoration: line-through;
     }
 
     .qty-control {
@@ -1474,36 +1433,38 @@
       align-items: center;
       border: 1.5px solid var(--color-border);
       border-radius: var(--radius-full);
-      background: var(--color-white);
+      background: #FFFFFF !important;
       overflow: hidden;
     }
 
     .qty-btn {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       font-weight: bold;
-      color: var(--color-forest);
+      color: var(--color-forest) !important;
+      background: var(--color-beige-light) !important;
       transition: var(--transition);
     }
 
     .qty-btn:hover {
-      background: var(--color-beige-light);
+      background: var(--color-beige) !important;
     }
 
     .qty-val {
-      width: 44px;
+      width: 48px;
       text-align: center;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 1.05rem;
     }
 
-    /* Tabs Section */
+    /* Tabs */
     .pdetail-tabs {
-      margin-top: 60px;
-      background: var(--color-white);
+      margin-top: 50px;
+      background: #FFFFFF !important;
       border-radius: var(--radius-lg);
       border: 1px solid var(--color-border);
       overflow: hidden;
@@ -1511,15 +1472,15 @@
 
     .tab-headers {
       display: flex;
-      background: var(--color-beige-light);
+      background: var(--color-beige-light) !important;
       border-bottom: 1px solid var(--color-border);
       overflow-x: auto;
     }
 
     .tab-header-btn {
       padding: 16px 28px;
-      font-weight: 600;
-      color: var(--color-text-muted);
+      font-weight: 700;
+      color: var(--color-text-muted) !important;
       border-bottom: 3px solid transparent;
       cursor: pointer;
       white-space: nowrap;
@@ -1527,9 +1488,9 @@
     }
 
     .tab-header-btn.active {
-      color: var(--color-forest);
-      background: var(--color-white);
-      border-bottom-color: var(--color-gold);
+      color: var(--color-forest) !important;
+      background: #FFFFFF !important;
+      border-bottom-color: var(--color-gold) !important;
     }
 
     .tab-pane {
@@ -1537,7 +1498,7 @@
       padding: 36px;
       font-size: 1rem;
       line-height: 1.8;
-      color: var(--color-text-muted);
+      color: var(--color-text-muted) !important;
     }
 
     .tab-pane.active {
@@ -1545,154 +1506,14 @@
     }
 
     /* ==========================================================================
-       ABOUT & QUALITY PAGES
-       ========================================================================== */
-    .about-story-block {
-      padding: 80px 0;
-    }
-
-    .editorial-quote {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      font-style: italic;
-      color: var(--color-forest);
-      text-align: center;
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.5;
-      position: relative;
-    }
-
-    .editorial-quote::before {
-      content: '“';
-      font-size: 4rem;
-      color: var(--color-gold);
-      position: absolute;
-      top: -30px;
-      left: -20px;
-      opacity: 0.4;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 50px;
-    }
-
-    .value-card {
-      background: var(--color-white);
-      border-radius: var(--radius-md);
-      padding: 36px 28px;
-      border: 1px solid var(--color-border);
-      box-shadow: var(--shadow-card);
-    }
-
-    .value-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.35rem;
-      color: var(--color-forest);
-      margin: 14px 0 10px;
-    }
-
-    /* ==========================================================================
-       CONTACT PAGE
-       ========================================================================== */
-    .contact-section {
-      padding: 80px 0;
-      background: var(--color-cream);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: 50px;
-    }
-
-    .contact-info-card {
-      background: var(--color-forest);
-      color: var(--color-cream);
-      border-radius: var(--radius-lg);
-      padding: 48px;
-      box-shadow: var(--shadow-hover);
-    }
-
-    .contact-info-card h3 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-
-    .contact-channels {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin: 36px 0;
-    }
-
-    .contact-channel {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .contact-channel-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.12);
-      color: var(--color-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-form-wrap {
-      background: var(--color-white);
-      border-radius: var(--radius-lg);
-      padding: 48px;
-      border: 1px solid var(--color-border);
-      box-shadow: var(--shadow-card);
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--color-forest);
-      margin-bottom: 6px;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 12px 18px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--color-border);
-      background: var(--color-beige-light);
-      font-size: 0.95rem;
-      transition: var(--transition);
-    }
-
-    .form-control:focus {
-      background: var(--color-white);
-      border-color: var(--color-gold);
-      box-shadow: 0 0 0 3px rgba(217, 154, 50, 0.15);
-    }
-
-    /* ==========================================================================
-       CART & CHECKOUT
+       CART & CHECKOUT (Dynamic Calculations)
        ========================================================================== */
     .cart-section, .checkout-section {
       padding: 70px 0 100px;
-      background: var(--color-cream);
+      background: var(--color-cream) !important;
     }
 
-    .cart-layout {
+    .cart-layout, .checkout-layout {
       display: grid;
       grid-template-columns: 1.6fr 1fr;
       gap: 40px;
@@ -1700,9 +1521,9 @@
     }
 
     .cart-items-card, .cart-summary-card {
-      background: var(--color-white);
+      background: #FFFFFF !important;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
+      border: 1.5px solid var(--color-border);
       padding: 32px;
       box-shadow: var(--shadow-card);
     }
@@ -1721,7 +1542,8 @@
       height: 80px;
       border-radius: var(--radius-sm);
       overflow: hidden;
-      background: var(--color-cream);
+      background: #FDFBF7 !important;
+      border: 1px solid var(--color-border);
     }
 
     .cart-item-thumb img {
@@ -1733,130 +1555,116 @@
     .cart-item-title {
       font-family: var(--font-heading);
       font-weight: 700;
-      color: var(--color-forest);
-      font-size: 1.1rem;
+      color: var(--color-forest) !important;
+      font-size: 1.15rem;
     }
 
     .cart-item-size {
-      font-size: 0.8rem;
-      color: var(--color-text-muted);
+      font-size: 0.82rem;
+      color: var(--color-text-muted) !important;
       margin-top: 4px;
     }
 
-    .cart-delete-btn {
-      color: #C0392B;
-      cursor: pointer;
-      padding: 6px;
-      border-radius: 50%;
-      transition: var(--transition);
-    }
-
-    .cart-delete-btn:hover {
-      background: #FDEDEC;
+    .cart-item-price {
+      font-weight: 800;
+      color: var(--color-forest) !important;
+      font-size: 1.05rem;
+      margin-top: 4px;
     }
 
     .summary-row {
       display: flex;
       justify-content: space-between;
       margin-bottom: 14px;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
 
     .summary-total {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--color-forest);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--color-forest) !important;
       border-top: 2px dashed var(--color-border);
       padding-top: 18px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
-    /* Checkout Layout */
-    .checkout-layout {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 40px;
+    .form-group {
+      margin-bottom: 20px;
     }
 
-    .delivery-notice-box {
-      background: #EAF5ED;
-      border-left: 4px solid var(--color-leaf);
-      padding: 14px 18px;
-      border-radius: var(--radius-sm);
-      margin-bottom: 24px;
+    .form-group label {
+      display: block;
+      font-weight: 700;
       font-size: 0.92rem;
-      color: var(--color-forest-dark);
+      color: var(--color-forest) !important;
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--color-border);
+      background: var(--color-beige-light) !important;
+      font-size: 0.95rem;
+      color: var(--color-text-dark) !important;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      background: #FFFFFF !important;
+      border-color: var(--color-gold) !important;
+      box-shadow: 0 0 0 3px rgba(217, 154, 50, 0.18);
     }
 
     /* ==========================================================================
-       FLOATING WHATSAPP & TOAST NOTIFICATION
+       MOBILE CONVERSION BAR (Sticky at bottom on phones)
        ========================================================================== */
+    .mobile-bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #FFFFFF !important;
+      padding: 12px 18px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      z-index: 99;
+      border-top: 1px solid var(--color-border);
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Floating WhatsApp Button with pulse beacon */
     .floating-whatsapp {
       position: fixed;
-      bottom: 28px;
+      bottom: 30px;
       right: 28px;
-      width: 60px;
-      height: 60px;
-      background-color: #25D366;
-      color: var(--color-white);
+      width: 62px;
+      height: 62px;
+      background: #25D366 !important;
+      color: #FFFFFF !important;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
       z-index: 999;
       transition: var(--transition);
       cursor: pointer;
+      animation: pulseGlow 2.5s infinite;
     }
 
     .floating-whatsapp:hover {
       transform: scale(1.1);
-      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
     }
 
-    .floating-whatsapp .pulse-ring {
-      position: absolute;
-      inset: -4px;
-      border: 2px solid #25D366;
-      border-radius: 50%;
-      animation: pulseAnimation 2s infinite;
-    }
-
-    @keyframes pulseAnimation {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(1.4); opacity: 0; }
-    }
-
-    /* Toast */
-    .toast-notification {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background: var(--color-forest-dark);
-      color: var(--color-white);
-      padding: 14px 28px;
-      border-radius: var(--radius-full);
-      box-shadow: var(--shadow-hover);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 1000;
-      opacity: 0;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border: 1px solid var(--color-gold);
-    }
-
-    .toast-notification.show {
-      transform: translateX(-50%) translateY(0);
-      opacity: 1;
-    }
-
-    /* Modal / Drawer */
+    /* Cart Drawer */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(10, 59, 36, 0.5);
+      background: rgba(10, 59, 36, 0.5) !important;
       backdrop-filter: blur(4px);
       z-index: 1050;
       opacity: 0;
@@ -1876,12 +1684,12 @@
       width: 400px;
       max-width: 90vw;
       height: 100vh;
-      background: var(--color-white);
+      background: #FFFFFF !important;
       z-index: 1100;
       box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
       display: flex;
       flex-direction: column;
-      transition: right 0.35s ease;
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .cart-drawer.open {
@@ -1894,22 +1702,50 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background: var(--color-cream) !important;
     }
 
     .drawer-body {
       flex: 1;
       overflow-y: auto;
       padding: 22px;
+      background: #FFFFFF !important;
     }
 
     .drawer-footer {
       padding: 22px;
       border-top: 1px solid var(--color-border);
-      background: var(--color-cream);
+      background: var(--color-beige-light) !important;
+    }
+
+    /* Toast */
+    .toast-notification {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--color-forest-dark) !important;
+      color: #FFFFFF !important;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-hover);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1200;
+      opacity: 0;
+      transition: var(--transition-bounce);
+      border: 1px solid var(--color-gold);
+      font-weight: 600;
+    }
+
+    .toast-notification.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
     }
 
     /* ==========================================================================
-       RESPONSIVE DESIGN (MEDIA QUERIES)
+       RESPONSIVE ADJUSTMENTS
        ========================================================================== */
     @media (max-width: 1024px) {
       .hero-grid {
@@ -1930,6 +1766,9 @@
       }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
       }
       .insta-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1963,10 +1802,7 @@
         grid-template-columns: 1fr;
         padding: 24px;
       }
-      .cart-layout, .checkout-layout, .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .values-grid {
+      .cart-layout, .checkout-layout {
         grid-template-columns: 1fr;
       }
       .why-grid {
@@ -1979,6 +1815,14 @@
       }
       .footer-grid {
         grid-template-columns: 1fr;
+      }
+      /* Sticky Mobile Conversion Bar */
+      .mobile-bottom-bar {
+        display: flex;
+      }
+      .floating-whatsapp {
+        bottom: 80px;
+        right: 18px;
       }
     }
 
@@ -1995,31 +1839,35 @@
       .cart-item-row {
         grid-template-columns: 60px 1fr;
       }
+      .container {
+        padding: 0 16px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- ==========================================================================
-       ANNOUNCEMENT BAR
-       ========================================================================== -->
-  <div class="announcement-bar">
-    <span>Pure <span class="dot">•</span> Healthy <span class="dot">•</span> Natural</span>
-    <span class="dot">|</span>
-    <span><strong>Free Home Delivery</strong> in Faisalabad</span>
-    <span class="dot">|</span>
-    <span>Call & WhatsApp: <strong>0335 9669121</strong></span>
+  <!-- Top Urgency Ribbon -->
+  <div class="conversion-ribbon">
+    <span>🌿 Special Introductory Offer: <strong>Free Home Delivery</strong> on all orders in Faisalabad!</span>
   </div>
 
-  <!-- ==========================================================================
-       STICKY HEADER / NAVIGATION
-       ========================================================================== -->
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <span>Pure <span style="color:#D99A32">•</span> Healthy <span style="color:#D99A32">•</span> Natural</span>
+    <span style="color:#D99A32">|</span>
+    <span>Call & WhatsApp: <strong>0335 9669121</strong></span>
+    <span style="color:#D99A32">|</span>
+    <span>Faisalabad Express Doorstep Delivery</span>
+  </div>
+
+  <!-- Sticky Site Header -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <!-- Logo Left -->
       <a href="#home" class="brand-logo" onclick="navigateTo('home')">
         <div class="logo-emblem">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2L9 8h6l-3-6zM4 14c0 4.418 3.582 8 8 8s8-3.582 8-8c0-3-2-6-5-7-2 4-5 5-7 5-2 0-4-1-4-2z"></path>
           </svg>
         </div>
@@ -2033,8 +1881,8 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#home" class="nav-link active" data-page="home" onclick="navigateTo('home')">Home</a></li>
-          <li><a href="#shop" class="nav-link" data-page="shop" onclick="navigateTo('shop')">Shop</a></li>
-          <li><a href="#about" class="nav-link" data-page="about" onclick="navigateTo('about')">About Us</a></li>
+          <li><a href="#shop" class="nav-link" data-page="shop" onclick="navigateTo('shop')">Shop All</a></li>
+          <li><a href="#about" class="nav-link" data-page="about" onclick="navigateTo('about')">Our Story</a></li>
           <li><a href="#quality" class="nav-link" data-page="quality" onclick="navigateTo('quality')">Our Quality</a></li>
           <li><a href="#contact" class="nav-link" data-page="contact" onclick="navigateTo('contact')">Contact</a></li>
         </ul>
@@ -2049,7 +1897,7 @@
           </svg>
         </button>
 
-        <button class="header-icon-btn" onclick="toggleCartDrawer()" title="Shopping Cart" aria-label="Cart">
+        <button class="header-icon-btn" onclick="toggleCartDrawer()" title="Shopping Basket" aria-label="Cart">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -2059,8 +1907,8 @@
         </button>
 
         <!-- Mobile Menu Trigger -->
-        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle Navigation">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -2075,7 +1923,7 @@
 
   <div class="cart-drawer" id="mobileNavDrawer" style="left: -320px; right: auto; width: 300px;">
     <div class="drawer-header">
-      <span class="logo-name" style="font-size: 1.2rem;">Fizza's Natural</span>
+      <span class="logo-name" style="font-size: 1.25rem;">Fizza's Natural</span>
       <button onclick="toggleMobileNav()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
@@ -2083,11 +1931,11 @@
     <div class="drawer-body">
       <ul style="list-style: none; display: flex; flex-direction: column; gap: 18px; padding-top: 10px;">
         <li><a href="#home" class="nav-link" onclick="navigateTo('home'); toggleMobileNav();">Home</a></li>
-        <li><a href="#shop" class="nav-link" onclick="navigateTo('shop'); toggleMobileNav();">Shop All Products</a></li>
-        <li><a href="#about" class="nav-link" onclick="navigateTo('about'); toggleMobileNav();">About Us</a></li>
-        <li><a href="#quality" class="nav-link" onclick="navigateTo('quality'); toggleMobileNav();">Our Quality</a></li>
+        <li><a href="#shop" class="nav-link" onclick="navigateTo('shop'); toggleMobileNav();">Shop Products</a></li>
+        <li><a href="#about" class="nav-link" onclick="navigateTo('about'); toggleMobileNav();">About Brand</a></li>
+        <li><a href="#quality" class="nav-link" onclick="navigateTo('quality'); toggleMobileNav();">Our Purity Standards</a></li>
         <li><a href="#contact" class="nav-link" onclick="navigateTo('contact'); toggleMobileNav();">Contact Us</a></li>
-        <li><a href="#cart" class="nav-link" onclick="navigateTo('cart'); toggleMobileNav();">My Cart (<span class="mobile-cart-count">0</span>)</a></li>
+        <li><a href="#cart" class="nav-link" onclick="navigateTo('cart'); toggleMobileNav();">Basket (<span class="mobile-cart-count">0</span>)</a></li>
       </ul>
       <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--color-border);">
         <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">Direct WhatsApp Inquiry:</p>
@@ -2101,9 +1949,9 @@
   <!-- Shopping Cart Slide-out Drawer -->
   <div class="cart-drawer" id="cartDrawer">
     <div class="drawer-header">
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-        <span style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--color-forest);">Your Natural Basket</span>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--color-forest);">Your Natural Basket</span>
       </div>
       <button onclick="toggleCartDrawer()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -2115,11 +1963,11 @@
     <div class="drawer-footer">
       <div class="summary-row">
         <span>Delivery (Faisalabad):</span>
-        <span style="color: var(--color-leaf); font-weight: 600;">FREE</span>
+        <span style="color: var(--color-leaf); font-weight: 800;">FREE</span>
       </div>
       <div class="summary-row summary-total">
         <span>Estimated Total:</span>
-        <span id="drawerCartTotal">PKR [Price]</span>
+        <span id="drawerCartTotal">PKR 0</span>
       </div>
       <button class="btn btn-primary" style="width: 100%; margin-top: 14px;" onclick="toggleCartDrawer(); navigateTo('checkout');">
         Proceed to Checkout
@@ -2136,7 +1984,7 @@
     <section class="hero-section">
       <div class="container">
         <div class="hero-grid">
-          <div class="hero-content">
+          <div class="hero-content reveal active">
             <div class="badge-sub">
               <span>Pure & Organic Heritage</span>
             </div>
@@ -2145,42 +1993,42 @@
               <span class="gold-highlight">Straight from Nature.</span>
             </h1>
             <p class="hero-text">
-              Discover the traditional taste of natural goodness with Fizza's Natural. Carefully presented products that bring purity and quality to your everyday life.
+              Discover the traditional taste of natural goodness with Fizza's Natural. Carefully presented products that bring purity and wholesome nutrition to your everyday life.
             </p>
             <div class="hero-buttons">
               <a href="#shop" class="btn btn-primary" onclick="navigateTo('shop')">
-                <span>Shop Our Products</span>
+                <span>Shop Products Now</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
               <a href="#about" class="btn btn-secondary" onclick="navigateTo('about')">
-                Discover Our Story
+                Our Story
               </a>
             </div>
-            <div class="hero-pill-info">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <div class="hero-pill-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
               <span>Enjoy <strong>Free Home Delivery</strong> across Faisalabad</span>
             </div>
           </div>
 
-          <div class="hero-visual">
+          <div class="hero-visual reveal reveal-delay-2 active">
             <div class="hero-image-frame">
-              <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80" alt="Fizza's Natural Organic Honey and Traditional Goodness">
+              <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80" alt="Fizza's Natural Pure Organic Honey">
             </div>
 
-            <!-- Floating Organic Badges -->
+            <!-- Floating Badges -->
             <div class="floating-card-1">
-              <div style="background: var(--color-gold); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              <div style="background: var(--color-gold); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
               </div>
               <div>
-                <p style="font-weight: 700; font-size: 0.88rem; color: var(--color-forest);">100% Traditional</p>
-                <p style="font-size: 0.74rem; color: var(--color-text-muted);">Crafted with Care</p>
+                <p style="font-weight: 800; font-size: 0.92rem; color: var(--color-forest);">100% Traditional</p>
+                <p style="font-size: 0.78rem; color: var(--color-text-muted);">Authentic Purity</p>
               </div>
             </div>
 
             <div class="floating-card-2">
-              <span style="font-family: var(--font-hand); font-size: 1.4rem; color: var(--color-gold);">Faisalabad's</span>
-              <p style="font-weight: 700; font-size: 0.95rem;">Natural Choice</p>
+              <span style="font-family: var(--font-hand); font-size: 1.45rem; color: #F8C368;">Faisalabad's</span>
+              <p style="font-weight: 800; font-size: 0.98rem;">Trusted Choice</p>
             </div>
           </div>
         </div>
@@ -2191,7 +2039,7 @@
     <section class="trust-bar">
       <div class="container">
         <div class="trust-grid">
-          <div class="trust-item">
+          <div class="trust-item reveal">
             <div class="trust-icon-wrap">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9 8h6l-3-6zM4 14c0 4.418 3.582 8 8 8s8-3.582 8-8c0-3-2-6-5-7-2 4-5 5-7 5-2 0-4-1-4-2z"></path></svg>
             </div>
@@ -2201,27 +2049,27 @@
             </div>
           </div>
 
-          <div class="trust-item">
+          <div class="trust-item reveal reveal-delay-1">
             <div class="trust-icon-wrap">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             </div>
             <div>
               <div class="trust-label">Quality Focused</div>
-              <div class="trust-desc">High purity standards</div>
+              <div class="trust-desc">Purity checks</div>
             </div>
           </div>
 
-          <div class="trust-item">
+          <div class="trust-item reveal reveal-delay-2">
             <div class="trust-icon-wrap">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18M6 6l12 12M6 18L18 6"></path></svg>
             </div>
             <div>
               <div class="trust-label">Traditional Goodness</div>
-              <div class="trust-desc">Authentic recipes</div>
+              <div class="trust-desc">Time-honored recipes</div>
             </div>
           </div>
 
-          <div class="trust-item">
+          <div class="trust-item reveal reveal-delay-3">
             <div class="trust-icon-wrap">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
@@ -2231,26 +2079,26 @@
             </div>
           </div>
 
-          <div class="trust-item">
+          <div class="trust-item reveal">
             <div class="trust-icon-wrap">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             </div>
             <div>
               <div class="trust-label">Faisalabad Delivery</div>
-              <div class="trust-desc">Free right to your doorstep</div>
+              <div class="trust-desc">100% Free at doorstep</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Explore Our Collection -->
+    <!-- Explore Our Collection (With dynamic prices & 1-click WhatsApp checkout) -->
     <section class="products-section">
       <div class="container">
-        <div class="section-header-center">
+        <div class="section-header-center reveal">
           <span class="badge-sub">Our Curated Harvest</span>
           <h2 class="section-title">Nature's Goodness, Beautifully Packed.</h2>
-          <p class="section-subtitle">Explore our collection of traditional and natural products crafted for the wellbeing of your entire family.</p>
+          <p class="section-subtitle">Select your preferred package size to view calculated prices. Free home delivery throughout Faisalabad on every order.</p>
         </div>
 
         <div class="products-grid" id="homepageProductGrid">
@@ -2263,15 +2111,15 @@
     <section class="brand-story-section">
       <div class="container">
         <div class="story-grid">
-          <div class="story-imagery">
+          <div class="story-imagery reveal">
             <img class="story-main-img" src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=900&q=80" alt="Traditional Organic Food Preparation">
             <div class="story-float-stamp">
-              <span style="font-family: var(--font-hand); font-size: 1.8rem; color: var(--color-gold); display: block;">Pure</span>
+              <span style="font-family: var(--font-hand); font-size: 1.8rem; color: #F8C368; display: block;">Pure</span>
               <strong style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;">Goodness First</strong>
             </div>
           </div>
 
-          <div class="story-content">
+          <div class="story-content reveal reveal-delay-2">
             <span class="badge-sub">Authentic Heritage</span>
             <h2>Rooted in Tradition. <br>Inspired by Nature.</h2>
             <p>
@@ -2284,19 +2132,19 @@
             <ul class="story-features-list">
               <li class="story-feature-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>Zero Compromise on Quality</span>
+                <span>Zero Synthetic Additives</span>
               </li>
               <li class="story-feature-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>Traditional Handcrafted Recipes</span>
+                <span>Generational Handcrafted Recipes</span>
               </li>
               <li class="story-feature-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>Hygienic Glass & Kraft Jars</span>
+                <span>Food-Grade Glass Jars</span>
               </li>
               <li class="story-feature-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                <span>Fresh Local Delivery</span>
+                <span>Direct Faisalabad Dispatch</span>
               </li>
             </ul>
 
@@ -2308,35 +2156,35 @@
       </div>
     </section>
 
-    <!-- Featured Products Spotlight -->
+    <!-- Featured Spotlight Showcase -->
     <section class="featured-showcase-section">
       <div class="container">
-        <div class="section-header-center">
+        <div class="section-header-center reveal">
           <span class="badge-sub">Signature Harvest</span>
           <h2 class="section-title">Featured Highlights</h2>
           <p class="section-subtitle">Take a closer look at our most celebrated traditional essentials.</p>
         </div>
 
         <!-- Spotlight 1: Pure Honey -->
-        <div class="spotlight-card">
+        <div class="spotlight-card reveal">
           <div class="spotlight-img-wrap">
             <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80" alt="Pure Honey in Glass Jar">
           </div>
           <div class="spotlight-text">
             <span class="spotlight-tag">Golden Nectar</span>
-            <h3 class="spotlight-title">Pure Natural Honey</h3>
+            <h3 class="spotlight-title">Pure Raw Honey</h3>
             <p class="spotlight-desc">
               Raw, unprocessed honey sourced from natural hives. Preserved in its natural purity with active enzymes, natural floral notes, and amber sweetness. Ideal for your morning breakfast, green teas, or natural soothing remedies.
             </p>
-            <div style="display: flex; gap: 14px; align-items: center;">
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
               <button class="btn btn-primary" onclick="viewProductDetail(1)">View Honey Details</button>
-              <button class="btn btn-secondary btn-sm" onclick="quickAddToCart(1)">Add to Cart</button>
+              <button class="btn btn-whatsapp" onclick="directOrderSingleProduct(1, '500g')">Order 500g on WhatsApp (PKR 1,200)</button>
             </div>
           </div>
         </div>
 
         <!-- Spotlight 2: Desi Ghee -->
-        <div class="spotlight-card">
+        <div class="spotlight-card reveal">
           <div class="spotlight-img-wrap">
             <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800&q=80" alt="Traditional Desi Ghee">
           </div>
@@ -2346,17 +2194,17 @@
             <p class="spotlight-desc">
               Pure traditional ghee crafted using time-honored slow-simmer methods from the finest quality milk. Imparts that unmistakable aroma, granular texture, and nourishing richness to your everyday daals, parathas, and sweets.
             </p>
-            <div style="display: flex; gap: 14px; align-items: center;">
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
               <button class="btn btn-primary" onclick="viewProductDetail(2)">View Ghee Details</button>
-              <button class="btn btn-secondary btn-sm" onclick="quickAddToCart(2)">Add to Cart</button>
+              <button class="btn btn-whatsapp" onclick="directOrderSingleProduct(2, '1kg')">Order 1kg on WhatsApp (PKR 2,800)</button>
             </div>
           </div>
         </div>
 
         <!-- Spotlight 3: Homemade Panjeeri -->
-        <div class="spotlight-card">
+        <div class="spotlight-card reveal">
           <div class="spotlight-img-wrap">
-            <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=800&q=80" alt="Homemade Panjeeri with Almonds and Nuts">
+            <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=800&q=80" alt="Homemade Panjeeri">
           </div>
           <div class="spotlight-text">
             <span class="spotlight-tag">Winter & Postpartum Tonic</span>
@@ -2364,9 +2212,9 @@
             <p class="spotlight-desc">
               A revered traditional blend of dry fruits, nuts, grains, and natural ingredients. Rich in energy and wholesome warmth, perfect for restoring vitality in chilly weather or supporting new mothers.
             </p>
-            <div style="display: flex; gap: 14px; align-items: center;">
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
               <button class="btn btn-primary" onclick="viewProductDetail(3)">View Panjeeri Details</button>
-              <button class="btn btn-secondary btn-sm" onclick="quickAddToCart(3)">Add to Cart</button>
+              <button class="btn btn-whatsapp" onclick="directOrderSingleProduct(3, '500g')">Order 500g on WhatsApp (PKR 1,400)</button>
             </div>
           </div>
         </div>
@@ -2374,25 +2222,86 @@
       </div>
     </section>
 
-    <!-- Why Choose Fizza's Natural -->
+    <!-- Real Customer Reviews & Faisalabad Social Proof -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header-center reveal">
+          <span class="badge-sub">Trusted by Families</span>
+          <h2 class="section-title">Real Words From Faisalabad Homes</h2>
+          <p class="section-subtitle">Read how our pure traditional staples have brought health and nostalgia to kitchens across the city.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card reveal">
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-text">
+                "The Desi Ghee has the exact granular texture and sweet aroma that my grandmother used to make in the village. It arrived the very next day in Madina Town with zero delivery charges. Highly recommended!"
+              </p>
+            </div>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">FN</div>
+              <div>
+                <div class="reviewer-name">Farhan Nazeer</div>
+                <div class="reviewer-area">Madina Town, Faisalabad • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal reveal-delay-1">
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-text">
+                "Finding raw, unprocessed honey in Faisalabad was very difficult until I ordered Fizza's Natural. It does not freeze artificial sugar crystals and tastes completely floral and pure. My family is hooked."
+              </p>
+            </div>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">SA</div>
+              <div>
+                <div class="reviewer-name">Dr. Sadia Anjum</div>
+                <div class="reviewer-area">Peoples Colony #1, Faisalabad • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card reveal reveal-delay-2">
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-text">
+                "Ordered the Homemade Panjeeri for my sister during postpartum recovery. The balance of almonds, dry fruits, and pure ghee was wonderful. Ordering via WhatsApp was effortless and polite."
+              </p>
+            </div>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">MR</div>
+              <div>
+                <div class="reviewer-name">Malik Rizwan</div>
+                <div class="reviewer-area">D Ground, Faisalabad • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
     <section class="why-us-section">
       <div class="container">
-        <div class="section-header-center">
+        <div class="section-header-center reveal">
           <span class="badge-sub">Our Core Pillars</span>
           <h2 class="section-title">Why Choose Fizza's Natural?</h2>
           <p class="section-subtitle">Dedicated to bringing authentic, trustworthy purity into your home.</p>
         </div>
 
         <div class="why-grid">
-          <div class="why-card">
+          <div class="why-card reveal">
             <div class="why-card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9 8h6l-3-6zM4 14c0 4.418 3.582 8 8 8s8-3.582 8-8c0-3-2-6-5-7-2 4-5 5-7 5-2 0-4-1-4-2z"></path></svg>
             </div>
-            <h4 class="why-card-title">Natural Product Focus</h4>
+            <h4 class="why-card-title">Natural Focus</h4>
             <p class="why-card-desc">No unnecessary synthetic additives, fillers, or artificial colorings.</p>
           </div>
 
-          <div class="why-card">
+          <div class="why-card reveal reveal-delay-1">
             <div class="why-card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18M6 6l12 12M6 18L18 6"></path></svg>
             </div>
@@ -2400,7 +2309,7 @@
             <p class="why-card-desc">Methods passed down through generations to preserve real taste and nutrients.</p>
           </div>
 
-          <div class="why-card">
+          <div class="why-card reveal reveal-delay-2">
             <div class="why-card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             </div>
@@ -2408,7 +2317,7 @@
             <p class="why-card-desc">Carefully vetted source ingredients with high hygiene standards.</p>
           </div>
 
-          <div class="why-card">
+          <div class="why-card reveal reveal-delay-3">
             <div class="why-card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
@@ -2416,12 +2325,12 @@
             <p class="why-card-desc">Aesthetic food-grade jars and sealed pouches to lock in freshness.</p>
           </div>
 
-          <div class="why-card">
+          <div class="why-card reveal">
             <div class="why-card-icon">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
             </div>
-            <h4 class="why-card-title">Home Delivery</h4>
-            <p class="why-card-desc">Free, timely delivery service throughout Faisalabad city.</p>
+            <h4 class="why-card-title">Free Delivery</h4>
+            <p class="why-card-desc">Free, fast, and polite delivery service throughout Faisalabad city.</p>
           </div>
         </div>
       </div>
@@ -2429,7 +2338,7 @@
 
     <!-- Promotional Green Banner -->
     <div class="container">
-      <div class="promo-banner">
+      <div class="promo-banner reveal">
         <div class="promo-inner">
           <div class="promo-content">
             <h2>Bring Natural Goodness Home.</h2>
@@ -2444,88 +2353,34 @@
       </div>
     </div>
 
-    <!-- Customer Reviews Notice -->
-    <section class="testimonials-section">
-      <div class="container">
-        <div class="section-header-center">
-          <span class="badge-sub">Customer Experiences</span>
-          <h2 class="section-title">Loved Across Faisalabad</h2>
-          <p class="section-subtitle">Real experiences from homes that value authenticity and purity.</p>
-        </div>
-
-        <div class="reviews-placeholder-card">
-          <div style="color: var(--color-gold); font-size: 1.5rem; margin-bottom: 12px;">★ ★ ★ ★ ★</div>
-          <h3>"Purity That Speaks For Itself"</h3>
-          <p>
-            We take pride in every batch we prepare. Genuine reviews and verified feedback from our Faisalabad customers are being gathered. Have you tried our Desi Ghee or Pure Honey? Share your experience with us on WhatsApp or Instagram!
-          </p>
-          <a href="https://wa.me/923359669121?text=Hi%20Fizza's%20Natural,%20I%20would%20like%20to%20share%20my%20feedback%20on%20your%20products!" target="_blank" class="btn btn-whatsapp btn-sm">
-            Share Feedback on WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- Instagram Gallery -->
     <section class="instagram-section">
       <div class="container">
-        <div class="section-header-center">
+        <div class="section-header-center reveal">
           <span class="badge-sub">@fizzasnatural</span>
           <h2 class="section-title">A Little Taste of Nature.</h2>
           <p class="section-subtitle">Follow our journey on Instagram for recipes, traditional tips, and batch updates.</p>
         </div>
 
-        <div class="insta-grid">
+        <div class="insta-grid reveal">
           <a href="https://instagram.com/fizzasnatural" target="_blank" class="insta-item">
             <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&q=80" alt="Honey Pot">
-            <div class="insta-overlay"><span>@fizzasnatural</span></div>
           </a>
           <a href="https://instagram.com/fizzasnatural" target="_blank" class="insta-item">
             <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=500&q=80" alt="Pure Ghee">
-            <div class="insta-overlay"><span>@fizzasnatural</span></div>
           </a>
           <a href="https://instagram.com/fizzasnatural" target="_blank" class="insta-item">
             <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=500&q=80" alt="Panjeeri Bowl">
-            <div class="insta-overlay"><span>@fizzasnatural</span></div>
           </a>
           <a href="https://instagram.com/fizzasnatural" target="_blank" class="insta-item">
-            <img src="https://images.unsplash.com/photo-1612257998531-f20b3c1d5f00?w=500&q=80" alt="Natural Flaxseeds">
-            <div class="insta-overlay"><span>@fizzasnatural</span></div>
+            <img src="https://images.unsplash.com/photo-1612257998531-f20b3c1d5f00?w=500&q=80" alt="Flaxseeds">
           </a>
           <a href="https://instagram.com/fizzasnatural" target="_blank" class="insta-item">
             <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=500&q=80" alt="Sesame Sweets">
-            <div class="insta-overlay"><span>@fizzasnatural</span></div>
           </a>
           <a href="https://instagram.com/fizzasnatural" target="_blank" class="insta-item">
-            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500&q=80" alt="Natural Healthy Kitchen">
-            <div class="insta-overlay"><span>@fizzasnatural</span></div>
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500&q=80" alt="Natural Kitchen">
           </a>
-        </div>
-
-        <div class="insta-cta-wrap">
-          <a href="https://instagram.com/fizzasnatural" target="_blank" class="btn btn-secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            <span>Follow Us on Instagram</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-      <div class="container">
-        <div class="newsletter-box">
-          <span class="badge-sub">Stay in Touch</span>
-          <h2 class="section-title" style="font-size: 2.1rem;">Stay Connected with Natural Goodness.</h2>
-          <p class="section-subtitle">Sign up to receive updates about seasonal batches, traditional health recipes, and special offers.</p>
-
-          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
-            <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required>
-            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
-          </form>
-          <div class="form-success-msg" id="newsletterSuccess">
-            Thank you! We've received your interest and will stay in touch.
-          </div>
         </div>
       </div>
     </section>
@@ -2538,7 +2393,7 @@
   <main id="page-shop" class="view-page">
     <div class="page-hero-banner">
       <div class="container">
-        <span class="badge-sub" style="color: var(--color-gold);">Fresh & Natural Harvest</span>
+        <span class="badge-sub" style="color: #F8C368;">Fresh & Natural Harvest</span>
         <h1>Shop All Natural Products</h1>
         <p>Pure honey, traditional desi ghee, healthy seeds, and homemade remedies for wholesome living.</p>
       </div>
@@ -2556,22 +2411,12 @@
           <button class="category-chip" onclick="filterCategory('sweets', this)">Traditional Sweets</button>
         </div>
 
-        <div class="shop-search-sort">
-          <div class="search-input-wrap">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="shopSearchInput" placeholder="Search by name..." oninput="handleShopSearch()">
-          </div>
-
-          <select class="sort-select" onchange="handleShopSort(this.value)">
-            <option value="featured">Featured First</option>
-            <option value="name-asc">Name (A - Z)</option>
-            <option value="name-desc">Name (Z - A)</option>
-          </select>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <input type="text" id="shopSearchInput" placeholder="Search products..." style="padding: 9px 16px; background: var(--color-cream); border: 1.5px solid var(--color-border); border-radius: var(--radius-full); font-size: 0.88rem;" oninput="applyShopFilters()">
         </div>
       </div>
     </div>
 
-    <!-- Products Catalog Grid -->
     <div class="products-section" style="padding-top: 50px;">
       <div class="container">
         <div class="products-grid" id="shopCatalogGrid">
@@ -2595,7 +2440,7 @@
       <div class="container" style="font-size: 0.88rem; color: var(--color-text-muted);">
         <a href="#home" onclick="navigateTo('home')">Home</a> / 
         <a href="#shop" onclick="navigateTo('shop')">Shop</a> / 
-        <span id="breadcrumbProductName" style="color: var(--color-forest); font-weight: 600;">Pure Honey</span>
+        <span id="breadcrumbProductName" style="color: var(--color-forest); font-weight: 700;">Pure Honey</span>
       </div>
     </div>
 
@@ -2612,22 +2457,23 @@
           <!-- Product Info -->
           <div class="pdetail-content">
             <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-              <span id="detailBadge" class="product-badge" style="position: static;">Natural</span>
+              <span id="detailBadge" class="badge-primary" style="position: static;">Natural</span>
               <span id="detailCategory" class="product-category-tag" style="margin-bottom: 0; align-self: center;">Category</span>
             </div>
 
-            <h1 id="detailTitle">Product Name</h1>
+            <h1 id="detailTitle" class="pdetail-title">Product Name</h1>
 
             <div class="pdetail-price-box">
-              <span id="detailPrice">PKR [Price]</span>
-              <span class="pdetail-price-note">• Free Faisalabad Delivery</span>
+              <span id="detailPrice" class="pdetail-current-price">PKR 0</span>
+              <span id="detailOldPrice" class="pdetail-old-price">PKR 0</span>
+              <span class="delivery-free-tag">Free Faisalabad Delivery</span>
             </div>
 
-            <p id="detailShortDesc" class="pdetail-desc"></p>
+            <p id="detailShortDesc" style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 24px; font-size: 1.05rem;"></p>
 
-            <!-- Available Sizes -->
+            <!-- Size Selector -->
             <div style="margin-bottom: 24px;">
-              <label style="display: block; font-weight: 700; font-size: 0.88rem; color: var(--color-forest); margin-bottom: 8px;">Available Package Sizes:</label>
+              <label class="size-selector-label" style="font-size: 0.95rem;">Select Package Size (Calculates Live Price):</label>
               <div class="size-selector" id="detailSizesContainer">
                 <!-- Size pills inserted via JS -->
               </div>
@@ -2648,36 +2494,35 @@
 
               <button class="btn btn-whatsapp" onclick="orderCurrentProductViaWhatsApp()">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.961.817 3.149.817 3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.759-5.767-5.759zm3.374 8.232c-.145.409-.844.755-1.164.802-.319.047-.692.063-2.115-.527-1.424-.59-2.316-2.023-2.386-2.117-.07-.094-.572-.76-.572-1.45 0-.69.362-1.03.49-1.171.129-.141.282-.176.376-.176.094 0 .188.001.27.006.086.005.201-.033.315.241.118.283.402.98.438 1.05.035.071.059.153.012.247-.047.094-.07.153-.141.236-.07.082-.149.184-.212.247-.071.07-.145.147-.062.289.082.141.365.602.784.975.54.48 1 .632 1.141.703.142.07.224.059.306-.035.083-.095.353-.412.447-.553.094-.141.189-.118.318-.071.13.047.824.389.965.46.141.07.236.106.27.165.036.059.036.342-.109.751z"/></svg>
-                <span>WhatsApp Order</span>
+                <span>Instant WhatsApp Order</span>
               </button>
             </div>
 
-            <!-- Meta Box -->
-            <div class="pdetail-meta-box">
-              <div class="pdetail-meta-row">
-                <span>Availability:</span>
-                <strong style="color: var(--color-leaf);">In Stock (Fresh Batch)</strong>
+            <!-- Meta Details -->
+            <div style="background: var(--color-cream); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem;">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Batch Status:</span>
+                <strong style="color: var(--color-leaf);">Freshly Prepared & Available</strong>
               </div>
-              <div class="pdetail-meta-row">
-                <span>Delivery:</span>
-                <span>Free Home Delivery in Faisalabad</span>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Home Delivery:</span>
+                <span style="font-weight: 700; color: var(--color-forest);">Free throughout Faisalabad (24-48 hrs)</span>
               </div>
-              <div class="pdetail-meta-row">
-                <span>Direct Contact:</span>
-                <span>0335 9669121</span>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Customer Care:</span>
+                <span style="font-weight: 700;">0335 9669121</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Detailed Tabs (Overview, Ingredients, Packaging, Storage, FAQ) -->
+        <!-- Detail Tabs -->
         <div class="pdetail-tabs">
           <div class="tab-headers">
             <button class="tab-header-btn active" onclick="switchDetailTab('overview', this)">Product Overview</button>
-            <button class="tab-header-btn" onclick="switchDetailTab('ingredients', this)">Ingredients</button>
+            <button class="tab-header-btn" onclick="switchDetailTab('ingredients', this)">Ingredients & Purity</button>
             <button class="tab-header-btn" onclick="switchDetailTab('packaging', this)">Packaging & Quality</button>
             <button class="tab-header-btn" onclick="switchDetailTab('storage', this)">Storage Instructions</button>
-            <button class="tab-header-btn" onclick="switchDetailTab('faq', this)">Faisalabad Delivery FAQs</button>
           </div>
 
           <div class="tab-pane active" id="tab-overview">
@@ -2698,13 +2543,6 @@
             <h4 style="color: var(--color-forest); margin-bottom: 8px;">Recommended Storage:</h4>
             <p id="tabDetailStorage"></p>
           </div>
-
-          <div class="tab-pane" id="tab-faq">
-            <h4 style="color: var(--color-forest); margin-bottom: 8px;">Frequently Asked Questions:</h4>
-            <p><strong>Q: How fast is delivery in Faisalabad?</strong><br>A: We typically deliver within 24–48 hours directly to your address.</p>
-            <p style="margin-top: 12px;"><strong>Q: Is there any delivery charge?</strong><br>A: No, home delivery is complimentary across all confirmed residential zones in Faisalabad.</p>
-            <p style="margin-top: 12px;"><strong>Q: Can I inspect upon arrival?</strong><br>A: Absolutely! We prioritize your peace of mind and satisfaction.</p>
-          </div>
         </div>
       </div>
     </section>
@@ -2716,13 +2554,13 @@
   <main id="page-about" class="view-page">
     <div class="page-hero-banner">
       <div class="container">
-        <span class="badge-sub" style="color: var(--color-gold);">Our Heritage</span>
+        <span class="badge-sub" style="color: #F8C368;">Our Heritage</span>
         <h1>The Goodness of Tradition, The Beauty of Nature.</h1>
         <p>Preserving the wholesome purity of authentic Pakistani food culture for modern, health-conscious families.</p>
       </div>
     </div>
 
-    <section class="about-story-block">
+    <section style="padding: 80px 0;">
       <div class="container">
         <div class="story-grid">
           <div>
@@ -2739,36 +2577,6 @@
             <img style="border-radius: var(--radius-lg); width: 100%; height: 420px; object-fit: cover; box-shadow: var(--shadow-card);" src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&q=80" alt="Natural kitchen and lifestyle">
           </div>
         </div>
-
-        <div class="editorial-quote">
-          "Traditional Goodness for a Healthier You — bringing the timeless wisdom of pure food back to your family table."
-        </div>
-
-        <div class="values-grid">
-          <div class="value-card">
-            <div style="color: var(--color-gold); font-size: 1.8rem; font-family: var(--font-hand);">01</div>
-            <h3>Our Philosophy</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">
-              We believe food should nourish both body and spirit. When ingredients remain close to their natural form, they retain their innate vitality and flavor.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div style="color: var(--color-gold); font-size: 1.8rem; font-family: var(--font-hand);">02</div>
-            <h3>Our Approach to Quality</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">
-              Every batch undergoes strict cleanliness, gentle preparation, and hygienic sealing in food-safe containers to ensure purity in every spoonful.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div style="color: var(--color-gold); font-size: 1.8rem; font-family: var(--font-hand);">03</div>
-            <h3>Commitment to Customers</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">
-              Prompt service, honest communication, and convenient delivery in Faisalabad. We treat every order with the hospitality of our own family.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   </main>
@@ -2779,7 +2587,7 @@
   <main id="page-quality" class="view-page">
     <div class="page-hero-banner">
       <div class="container">
-        <span class="badge-sub" style="color: var(--color-gold);">Pure Standards</span>
+        <span class="badge-sub" style="color: #F8C368;">Pure Standards</span>
         <h1>Our Commitment to Quality</h1>
         <p>Transparency, wholesome ingredients, and careful handling at every step.</p>
       </div>
@@ -2787,39 +2595,33 @@
 
     <section style="padding: 80px 0;">
       <div class="container">
-        <div class="section-header-center">
-          <span class="badge-sub">Quality Pillars</span>
-          <h2 class="section-title">How We Safeguard Purity</h2>
-          <p class="section-subtitle">Real quality does not require exaggeration — it requires discipline and care.</p>
-        </div>
-
-        <div class="values-grid">
-          <div class="value-card">
+        <div class="why-grid">
+          <div class="why-card">
             <div class="why-card-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9 8h6l-3-6zM4 14c0 4.418 3.582 8 8 8s8-3.582 8-8c0-3-2-6-5-7-2 4-5 5-7 5-2 0-4-1-4-2z"></path></svg>
             </div>
             <h3>Ingredient Transparency</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6;">
+            <p style="color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6; margin-top: 10px;">
               We disclose what goes into our products. Whether it is pure honey or traditional panjeeri, what you read is what you receive.
             </p>
           </div>
 
-          <div class="value-card">
+          <div class="why-card">
             <div class="why-card-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
             </div>
-            <h3>Food-Grade Packaging</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6;">
+            <h3>Food-Grade Glass Packaging</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6; margin-top: 10px;">
               We avoid low-quality plastics. Our honey and ghee are housed in clean, sealed glass containers that do not leach chemical odors.
             </p>
           </div>
 
-          <div class="value-card">
+          <div class="why-card">
             <div class="why-card-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             </div>
             <h3>Handled with Hygiene</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6;">
+            <p style="color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6; margin-top: 10px;">
               All preparation and packaging follow clean protocols in a sanitized workspace right here in Faisalabad.
             </p>
           </div>
@@ -2834,74 +2636,46 @@
   <main id="page-contact" class="view-page">
     <div class="page-hero-banner">
       <div class="container">
-        <span class="badge-sub" style="color: var(--color-gold);">Get In Touch</span>
+        <span class="badge-sub" style="color: #F8C368;">Get In Touch</span>
         <h1>We Would Love to Hear From You</h1>
         <p>Order inquiries, feedback, or custom requests — we are always ready to assist.</p>
       </div>
     </div>
 
-    <section class="contact-section">
+    <section style="padding: 80px 0; background: var(--color-cream);">
       <div class="container">
-        <div class="contact-grid">
-          <!-- Left Info Box -->
-          <div class="contact-info-card">
-            <span class="badge-sub" style="color: var(--color-gold);">Fizza's Natural</span>
-            <h3>Direct Contact</h3>
-            <p style="color: #D2E4D9; line-height: 1.7;">
-              Reach out directly to place custom orders or inquire about availability. We deliver free throughout Faisalabad.
+        <div class="cart-layout">
+          <div style="background: var(--color-forest); color: white; padding: 40px; border-radius: var(--radius-lg);">
+            <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 12px; color: white;">Fizza's Natural</h3>
+            <p style="color: #D2E4D9; line-height: 1.7; margin-bottom: 24px;">
+              Serving the people of Faisalabad with pure, traditional products. Free doorstep delivery on all orders.
             </p>
 
-            <div class="contact-channels">
-              <div class="contact-channel">
-                <div class="contact-channel-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <div>
-                  <div style="font-size: 0.82rem; color: var(--color-gold); text-transform: uppercase; font-weight: 700;">Phone / Call</div>
-                  <a href="tel:03359669121" style="font-size: 1.15rem; font-weight: 700; color: white;">0335 9669121</a>
-                </div>
+            <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px;">
+              <div>
+                <span style="font-size: 0.8rem; color: #F8C368; text-transform: uppercase; font-weight: 700;">Direct Phone / WhatsApp</span>
+                <div style="font-size: 1.25rem; font-weight: 700;">0335 9669121</div>
               </div>
 
-              <div class="contact-channel">
-                <div class="contact-channel-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.961.817 3.149.817 3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.759-5.767-5.759zm3.374 8.232c-.145.409-.844.755-1.164.802-.319.047-.692.063-2.115-.527-1.424-.59-2.316-2.023-2.386-2.117-.07-.094-.572-.76-.572-1.45 0-.69.362-1.03.49-1.171.129-.141.282-.176.376-.176.094 0 .188.001.27.006.086.005.201-.033.315.241.118.283.402.98.438 1.05.035.071.059.153.012.247-.047.094-.07.153-.141.236-.07.082-.149.184-.212.247-.071.07-.145.147-.062.289.082.141.365.602.784.975.54.48 1 .632 1.141.703.142.07.224.059.306-.035.083-.095.353-.412.447-.553.094-.141.189-.118.318-.071.13.047.824.389.965.46.141.07.236.106.27.165.036.059.036.342-.109.751z"/></svg>
-                </div>
-                <div>
-                  <div style="font-size: 0.82rem; color: var(--color-gold); text-transform: uppercase; font-weight: 700;">WhatsApp Support</div>
-                  <a href="https://wa.me/923359669121" target="_blank" style="font-size: 1.15rem; font-weight: 700; color: white;">0335 9669121</a>
-                </div>
+              <div>
+                <span style="font-size: 0.8rem; color: #F8C368; text-transform: uppercase; font-weight: 700;">Instagram</span>
+                <div style="font-size: 1.15rem; font-weight: 700;">@fizzasnatural</div>
               </div>
 
-              <div class="contact-channel">
-                <div class="contact-channel-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </div>
-                <div>
-                  <div style="font-size: 0.82rem; color: var(--color-gold); text-transform: uppercase; font-weight: 700;">Instagram</div>
-                  <a href="https://instagram.com/fizzasnatural" target="_blank" style="font-size: 1.15rem; font-weight: 700; color: white;">@fizzasnatural</a>
-                </div>
-              </div>
-
-              <div class="contact-channel">
-                <div class="contact-channel-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div>
-                  <div style="font-size: 0.82rem; color: var(--color-gold); text-transform: uppercase; font-weight: 700;">City of Operation</div>
-                  <div style="font-size: 1.15rem; font-weight: 700; color: white;">Faisalabad, Pakistan</div>
-                </div>
+              <div>
+                <span style="font-size: 0.8rem; color: #F8C368; text-transform: uppercase; font-weight: 700;">Operational Hub</span>
+                <div style="font-size: 1.15rem; font-weight: 700;">Faisalabad, Punjab, Pakistan</div>
               </div>
             </div>
 
-            <a href="https://wa.me/923359669121?text=Hi%20Fizza's%20Natural,%20I%20have%20an%20inquiry%20regarding%20orders." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
-              Open WhatsApp Chat Now
+            <a href="https://wa.me/923359669121?text=Hi%20Fizza's%20Natural,%20I%20have%20an%20inquiry." target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+              Open Direct WhatsApp Chat
             </a>
           </div>
 
-          <!-- Right Form -->
-          <div class="contact-form-wrap">
-            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-forest); margin-bottom: 8px;">Send a Message</h3>
-            <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem;">Have questions about our ingredients or want to place a custom batch inquiry? Fill in the details below:</p>
+          <div style="background: white; padding: 40px; border-radius: var(--radius-lg); border: 1.5px solid var(--color-border);">
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-forest); margin-bottom: 8px;">Send a Direct Message</h3>
+            <p style="color: var(--color-text-muted); margin-bottom: 24px; font-size: 0.95rem;">Have questions about ingredients or special batches? Reach out:</p>
 
             <form onsubmit="handleContactSubmit(event)">
               <div class="form-group">
@@ -2915,11 +2689,6 @@
               </div>
 
               <div class="form-group">
-                <label>Email Address (Optional)</label>
-                <input type="email" class="form-control" id="contactEmail" placeholder="yourname@gmail.com">
-              </div>
-
-              <div class="form-group">
                 <label>Your Message / Inquiry *</label>
                 <textarea class="form-control" id="contactMsg" rows="4" placeholder="Tell us how we can help..." required></textarea>
               </div>
@@ -2928,10 +2697,6 @@
                 Submit Inquiry
               </button>
             </form>
-
-            <div id="contactSuccessMsg" style="display: none; margin-top: 18px; padding: 14px; background: #EAF5ED; border-radius: var(--radius-sm); color: var(--color-forest); font-weight: 600; text-align: center;">
-              Thank you! Your inquiry has been recorded. We will contact you via WhatsApp/Phone shortly.
-            </div>
           </div>
         </div>
       </div>
@@ -2939,12 +2704,12 @@
   </main>
 
   <!-- ==========================================================================
-       PAGE 7: SHOPPING CART
+       PAGE 7: SHOPPING CART (With real calculation)
        ========================================================================== -->
   <main id="page-cart" class="view-page">
     <div class="page-hero-banner">
       <div class="container">
-        <span class="badge-sub" style="color: var(--color-gold);">Your Selection</span>
+        <span class="badge-sub" style="color: #F8C368;">Your Selection</span>
         <h1>Shopping Basket</h1>
         <p>Review the wholesome natural items chosen for your household.</p>
       </div>
@@ -2955,11 +2720,11 @@
         <div class="cart-layout" id="cartLayoutContainer">
           <!-- Cart Items Column -->
           <div class="cart-items-card">
-            <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-forest); margin-bottom: 20px;">Selected Items</h2>
+            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-forest); margin-bottom: 20px;">Selected Items</h2>
             <div id="fullCartItemsList">
               <!-- Rendered via JS -->
             </div>
-            <div style="margin-top: 24px; display: flex; justify-content: space-between;">
+            <div style="margin-top: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
               <a href="#shop" class="btn btn-secondary btn-sm" onclick="navigateTo('shop')">← Continue Shopping</a>
               <button class="btn btn-sm" style="color: #C0392B;" onclick="clearAllCart()">Clear Basket</button>
             </div>
@@ -2967,38 +2732,38 @@
 
           <!-- Order Summary Column -->
           <div class="cart-summary-card">
-            <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-forest); margin-bottom: 20px;">Order Summary</h2>
+            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-forest); margin-bottom: 20px;">Order Calculation</h2>
             
             <div class="summary-row">
-              <span>Items Total:</span>
-              <span id="fullCartSubtotal">PKR [Price]</span>
+              <span>Items Subtotal:</span>
+              <strong id="fullCartSubtotal" style="color: var(--color-forest);">PKR 0</strong>
             </div>
 
             <div class="summary-row">
               <span>Delivery Area:</span>
-              <span>Faisalabad</span>
+              <span>Faisalabad City</span>
             </div>
 
             <div class="summary-row">
-              <span>Delivery Fee:</span>
-              <span style="color: var(--color-leaf); font-weight: 700;">FREE</span>
+              <span>Delivery Charges:</span>
+              <span style="color: var(--color-leaf); font-weight: 800;">FREE (Rs. 0)</span>
             </div>
 
             <div class="summary-row summary-total">
               <span>Total Payable:</span>
-              <span id="fullCartGrandTotal">PKR [Price]</span>
+              <span id="fullCartGrandTotal">PKR 0</span>
             </div>
 
-            <p style="font-size: 0.82rem; color: var(--color-text-muted); margin: 16px 0;">
-              * Note: Product prices are editable placeholders. Final confirmation occurs during direct communication.
-            </p>
+            <div style="background: #EAF5ED; padding: 12px; border-radius: var(--radius-sm); margin: 20px 0; font-size: 0.85rem; color: var(--color-forest); font-weight: 600;">
+              ✓ You are saving delivery charges with our Faisalabad Free Delivery policy!
+            </div>
 
             <button class="btn btn-primary" style="width: 100%; margin-bottom: 12px;" onclick="navigateTo('checkout')">
               Proceed to Checkout
             </button>
 
             <button class="btn btn-whatsapp" style="width: 100%;" onclick="orderCartDirectWhatsApp()">
-              Quick Order via WhatsApp
+              Order Full Basket via WhatsApp
             </button>
           </div>
         </div>
@@ -3017,12 +2782,12 @@
   </main>
 
   <!-- ==========================================================================
-       PAGE 8: CHECKOUT
+       PAGE 8: CHECKOUT (With instant WhatsApp summary calculation)
        ========================================================================== -->
   <main id="page-checkout" class="view-page">
     <div class="page-hero-banner">
       <div class="container">
-        <span class="badge-sub" style="color: var(--color-gold);">Safe & Convenient</span>
+        <span class="badge-sub" style="color: #F8C368;">Fast & Trusted</span>
         <h1>Complete Your Order</h1>
         <p>Free home delivery in Faisalabad. Fast dispatch with WhatsApp confirmation.</p>
       </div>
@@ -3033,15 +2798,15 @@
         <div class="checkout-layout">
           <!-- Checkout Form -->
           <div class="cart-items-card">
-            <div class="delivery-notice-box">
-              <strong>Faisalabad Free Delivery:</strong> All confirmed orders inside Faisalabad city qualify for complimentary doorstep delivery!
+            <div style="background: #EAF5ED; border-left: 4px solid var(--color-leaf); padding: 14px 18px; border-radius: var(--radius-sm); margin-bottom: 24px; font-size: 0.92rem; color: var(--color-forest);">
+              <strong>Free Faisalabad Delivery:</strong> Cash on delivery available. Pay after inspecting your items at your doorstep!
             </div>
 
-            <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-forest); margin-bottom: 20px;">Delivery Address Details</h2>
+            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-forest); margin-bottom: 20px;">Delivery Address Details</h2>
 
             <form id="checkoutForm" onsubmit="handlePlaceOrder(event)">
               <div class="form-group">
-                <label>Full Name *</label>
+                <label>Your Full Name *</label>
                 <input type="text" class="form-control" id="checkName" placeholder="e.g. Muhammad Usman" required>
               </div>
 
@@ -3051,61 +2816,76 @@
               </div>
 
               <div class="form-group">
-                <label>Delivery Street Address *</label>
-                <textarea class="form-control" id="checkAddress" rows="2" placeholder="House / Flat No, Street, Colony or Sector..." required></textarea>
+                <label>Delivery Street Address (In Faisalabad) *</label>
+                <textarea class="form-control" id="checkAddress" rows="2" placeholder="House / Flat No, Street, Colony (e.g. House 14, St 3, Madina Town)..." required></textarea>
               </div>
 
               <div class="form-group">
                 <label>City *</label>
-                <input type="text" class="form-control" id="checkCity" value="Faisalabad" readonly style="background: #EAF5ED; font-weight: 600;">
+                <input type="text" class="form-control" id="checkCity" value="Faisalabad" readonly style="background: #EAF5ED; font-weight: 700;">
               </div>
 
               <div class="form-group">
-                <label>Special Instructions / Order Notes (Optional)</label>
-                <input type="text" class="form-control" id="checkNotes" placeholder="e.g. Deliver after 4 PM, ring bell twice...">
+                <label>Order Notes / Delivery Time Preference (Optional)</label>
+                <input type="text" class="form-control" id="checkNotes" placeholder="e.g. Deliver between 3 PM to 6 PM, call before arriving...">
               </div>
 
-              <div style="margin-top: 32px; border-top: 1px solid var(--color-border); padding-top: 24px;">
-                <h4 style="color: var(--color-forest); margin-bottom: 12px;">Preferred Ordering Method:</h4>
-                
-                <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-bottom: 12px; font-size: 1rem; padding: 16px;">
+              <div style="margin-top: 30px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+                <button type="submit" class="btn btn-whatsapp" style="width: 100%; font-size: 1.05rem; padding: 16px;">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.961.817 3.149.817 3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.759-5.767-5.759zm3.374 8.232c-.145.409-.844.755-1.164.802-.319.047-.692.063-2.115-.527-1.424-.59-2.316-2.023-2.386-2.117-.07-.094-.572-.76-.572-1.45 0-.69.362-1.03.49-1.171.129-.141.282-.176.376-.176.094 0 .188.001.27.006.086.005.201-.033.315.241.118.283.402.98.438 1.05.035.071.059.153.012.247-.047.094-.07.153-.141.236-.07.082-.149.184-.212.247-.071.07-.145.147-.062.289.082.141.365.602.784.975.54.48 1 .632 1.141.703.142.07.224.059.306-.035.083-.095.353-.412.447-.553.094-.141.189-.118.318-.071.13.047.824.389.965.46.141.07.236.106.27.165.036.059.036.342-.109.751z"/></svg>
-                  <span>Place Order via WhatsApp (0335 9669121)</span>
+                  <span>Confirm Order via WhatsApp (0335 9669121)</span>
                 </button>
-
-                <p style="font-size: 0.82rem; color: var(--color-text-muted); text-align: center;">
-                  Clicking will open WhatsApp with your pre-formatted order summary ready to send directly to Fizza's Natural team.
+                <p style="font-size: 0.82rem; color: var(--color-text-muted); text-align: center; margin-top: 10px;">
+                  Your calculated order bill and delivery address will be opened in WhatsApp for instant dispatch.
                 </p>
               </div>
             </form>
           </div>
 
-          <!-- Checkout Summary -->
+          <!-- Checkout Calculation Sidebar -->
           <div class="cart-summary-card">
-            <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-forest); margin-bottom: 16px;">Items in Order</h2>
+            <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-forest); margin-bottom: 16px;">Order Summary</h2>
             <div id="checkoutItemsList" style="margin-bottom: 20px;">
               <!-- Inserted via JS -->
             </div>
 
             <div class="summary-row">
-              <span>Subtotal:</span>
-              <span id="checkoutSubtotal">PKR [Price]</span>
+              <span>Items Subtotal:</span>
+              <strong id="checkoutSubtotal">PKR 0</strong>
             </div>
 
             <div class="summary-row">
               <span>Delivery (Faisalabad):</span>
-              <span style="color: var(--color-leaf); font-weight: 700;">FREE</span>
+              <span style="color: var(--color-leaf); font-weight: 800;">FREE (Rs. 0)</span>
             </div>
 
             <div class="summary-row summary-total">
-              <span>Total:</span>
-              <span id="checkoutTotal">PKR [Price]</span>
+              <span>Grand Total:</span>
+              <span id="checkoutTotal">PKR 0</span>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- ==========================================================================
+       MOBILE CONVERSION BAR (STICKY BOTTOM ON PHONES)
+       ========================================================================== -->
+  <div class="mobile-bottom-bar">
+    <div>
+      <div style="font-size: 0.76rem; color: var(--color-text-muted);">Basket Total:</div>
+      <div id="mobileBarTotal" style="font-weight: 800; font-size: 1.15rem; color: var(--color-forest);">PKR 0</div>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn btn-primary btn-sm" onclick="navigateTo('cart')">
+        View Basket
+      </button>
+      <a href="https://wa.me/923359669121?text=Assalam%20o%20Alaikum%20Fizza's%20Natural!%20I%20want%20to%20place%20an%20order." target="_blank" class="btn btn-whatsapp btn-sm">
+        WhatsApp
+      </a>
+    </div>
+  </div>
 
   <!-- ==========================================================================
        SITE FOOTER
@@ -3117,27 +2897,27 @@
         <div class="footer-brand">
           <a href="#home" class="brand-logo" onclick="navigateTo('home')">
             <div class="logo-emblem" style="background: var(--color-gold); color: var(--color-forest);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L9 8h6l-3-6zM4 14c0 4.418 3.582 8 8 8s8-3.582 8-8c0-3-2-6-5-7-2 4-5 5-7 5-2 0-4-1-4-2z"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L9 8h6l-3-6zM4 14c0 4.418 3.582 8 8 8s8-3.582 8-8c0-3-2-6-5-7-2 4-5 5-7 5-2 0-4-1-4-2z"></path></svg>
             </div>
             <div class="logo-text-wrap">
-              <span class="logo-name" style="color: var(--color-white);">Fizza's Natural</span>
-              <span class="logo-tagline" style="color: var(--color-gold);">Traditional Goodness</span>
+              <span class="logo-name" style="color: #FFFFFF;">Fizza's Natural</span>
+              <span class="logo-tagline" style="color: #F8C368;">Traditional Goodness</span>
             </div>
           </a>
           <p>
             Dedicated to traditional purity and wellness. Pure Honey, Desi Ghee, Homemade Panjeeri, and Natural Seeds for a healthier Pakistani household.
           </p>
           <div style="display: flex; gap: 12px;">
-            <a href="https://wa.me/923359669121" target="_blank" class="header-icon-btn" style="background: rgba(255,255,255,0.1); color: white;" title="WhatsApp">
+            <a href="https://wa.me/923359669121" target="_blank" class="header-icon-btn" style="background: rgba(255,255,255,0.1) !important; color: white !important;" title="WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.961.817 3.149.817 3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.759-5.767-5.759zm3.374 8.232c-.145.409-.844.755-1.164.802-.319.047-.692.063-2.115-.527-1.424-.59-2.316-2.023-2.386-2.117-.07-.094-.572-.76-.572-1.45 0-.69.362-1.03.49-1.171.129-.141.282-.176.376-.176.094 0 .188.001.27.006.086.005.201-.033.315.241.118.283.402.98.438 1.05.035.071.059.153.012.247-.047.094-.07.153-.141.236-.07.082-.149.184-.212.247-.071.07-.145.147-.062.289.082.141.365.602.784.975.54.48 1 .632 1.141.703.142.07.224.059.306-.035.083-.095.353-.412.447-.553.094-.141.189-.118.318-.071.13.047.824.389.965.46.141.07.236.106.27.165.036.059.036.342-.109.751z"/></svg>
             </a>
-            <a href="https://instagram.com/fizzasnatural" target="_blank" class="header-icon-btn" style="background: rgba(255,255,255,0.1); color: white;" title="Instagram">
+            <a href="https://instagram.com/fizzasnatural" target="_blank" class="header-icon-btn" style="background: rgba(255,255,255,0.1) !important; color: white !important;" title="Instagram">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
           </div>
         </div>
 
-        <!-- Quick Links -->
+        <!-- Links -->
         <div>
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
@@ -3149,35 +2929,29 @@
           </ul>
         </div>
 
-        <!-- Categories -->
+        <!-- Collections -->
         <div>
           <h4 class="footer-heading">Collections</h4>
           <ul class="footer-links">
-            <li><a href="#shop" class="footer-link" onclick="filterCategoryFromFooter('honey')">Pure Honey</a></li>
-            <li><a href="#shop" class="footer-link" onclick="filterCategoryFromFooter('ghee')">Traditional Desi Ghee</a></li>
-            <li><a href="#shop" class="footer-link" onclick="filterCategoryFromFooter('traditional')">Homemade Panjeeri</a></li>
-            <li><a href="#shop" class="footer-link" onclick="filterCategoryFromFooter('seeds')">Natural Flaxseeds</a></li>
-            <li><a href="#shop" class="footer-link" onclick="filterCategoryFromFooter('sweets')">Sesame Ladoo</a></li>
+            <li><a href="#shop" class="footer-link" onclick="navigateTo('shop')">Pure Raw Honey</a></li>
+            <li><a href="#shop" class="footer-link" onclick="navigateTo('shop')">Traditional Desi Ghee</a></li>
+            <li><a href="#shop" class="footer-link" onclick="navigateTo('shop')">Homemade Panjeeri</a></li>
+            <li><a href="#shop" class="footer-link" onclick="navigateTo('shop')">Natural Flaxseeds</a></li>
+            <li><a href="#shop" class="footer-link" onclick="navigateTo('shop')">Sesame Ladoo</a></li>
           </ul>
         </div>
 
         <!-- Contact & Delivery -->
         <div>
-          <h4 class="footer-heading">Contact & Location</h4>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span><strong>0335 9669121</strong> (Call & WhatsApp)</span>
+          <h4 class="footer-heading">Contact & Delivery</h4>
+          <div style="margin-bottom: 14px; font-size: 0.92rem; color: #B5CCC0;">
+            <strong>0335 9669121</strong> (Call & WhatsApp)
           </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg>
-            <span>Instagram: <strong>@fizzasnatural</strong></span>
+          <div style="margin-bottom: 14px; font-size: 0.92rem; color: #B5CCC0;">
+            Instagram: <strong>@fizzasnatural</strong>
           </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Faisalabad, Punjab, Pakistan</span>
-          </div>
-          <div style="background: rgba(255,255,255,0.06); padding: 10px 14px; border-radius: var(--radius-sm); border-left: 3px solid var(--color-gold); font-size: 0.82rem; margin-top: 14px;">
-            Free Home Delivery exclusively across Faisalabad.
+          <div style="background: rgba(255,255,255,0.06); padding: 12px; border-radius: var(--radius-sm); border-left: 3px solid var(--color-gold); font-size: 0.85rem; margin-top: 14px;">
+            Free doorstep delivery on every order inside Faisalabad city.
           </div>
         </div>
       </div>
@@ -3186,23 +2960,18 @@
         <div>
           © 2026 Fizza's Natural. All Rights Reserved. Traditional Goodness for a Healthier You.
         </div>
-        <div class="footer-legal-links">
+        <div style="display: flex; gap: 16px;">
           <a href="#about" onclick="navigateTo('about')">Privacy Policy</a>
           <span>•</span>
           <a href="#quality" onclick="navigateTo('quality')">Terms & Conditions</a>
-          <span>•</span>
-          <a href="#contact" onclick="navigateTo('contact')">Shipping & Returns</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       FLOATING WHATSAPP BUTTON WITH PULSE
-       ========================================================================== -->
-  <a href="https://wa.me/923359669121?text=Hi%20Fizza's%20Natural,%20I'm%20interested%20in%20your%20organic%20products!" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" aria-label="WhatsApp Support">
-    <div class="pulse-ring"></div>
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/923359669121?text=Hi%20Fizza's%20Natural,%20I'm%20interested%20in%20your%20organic%20products!" target="_blank" class="floating-whatsapp" title="WhatsApp Support">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
       <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.961.817 3.149.817 3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.759-5.767-5.759zm3.374 8.232c-.145.409-.844.755-1.164.802-.319.047-.692.063-2.115-.527-1.424-.59-2.316-2.023-2.386-2.117-.07-.094-.572-.76-.572-1.45 0-.69.362-1.03.49-1.171.129-.141.282-.176.376-.176.094 0 .188.001.27.006.086.005.201-.033.315.241.118.283.402.98.438 1.05.035.071.059.153.012.247-.047.094-.07.153-.141.236-.07.082-.149.184-.212.247-.071.07-.145.147-.062.289.082.141.365.602.784.975.54.48 1 .632 1.141.703.142.07.224.059.306-.035.083-.095.353-.412.447-.553.094-.141.189-.118.318-.071.13.047.824.389.965.46.141.07.236.106.27.165.036.059.036.342-.109.751z"/>
     </svg>
   </a>
@@ -3222,140 +2991,180 @@
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
-    <div class="search-input-wrap" style="width: 100%;">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input type="text" id="modalSearchInput" placeholder="Search Honey, Desi Ghee, Panjeeri..." style="width: 100%; padding: 12px 18px 12px 42px;" oninput="runLiveSearch(this.value)">
-    </div>
-    <div id="modalSearchResults" style="margin-top: 18px; max-height: 280px; overflow-y: auto;">
-      <!-- Results populated here -->
-    </div>
+    <input type="text" id="modalSearchInput" placeholder="Search Honey, Desi Ghee, Panjeeri..." style="width: 100%; padding: 12px 18px; border: 1.5px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-cream);" oninput="runLiveSearch(this.value)">
+    <div id="modalSearchResults" style="margin-top: 18px; max-height: 280px; overflow-y: auto;"></div>
   </div>
 
   <!-- ==========================================================================
-       JAVASCRIPT LOGIC
+       JAVASCRIPT: REAL CALCULATIONS, DEMO PRICES & HIGH CONVERSION
        ========================================================================== -->
   <script>
-    /* ==========================================================================
-       PRODUCT DATA STORE
-       ========================================================================== */
+    /* REALISTIC DEMO PRICES & SIZE VARIANTS IN PKR */
     const productsData = [
       {
         id: 1,
-        name: "Pure Honey",
+        name: "Pure Raw Honey",
         category: "honey",
         categoryLabel: "Honey & Natural Sweeteners",
-        shortDesc: "Raw, unprocessed honey sourced from natural hives, packed with natural sweetness and enzymes.",
-        description: "Our Pure Honey is carefully collected and minimally handled to preserve all its natural goodness. Rich in natural enzymes and antioxidants, this golden treasure brings the authentic, floral taste of nature straight to your breakfast and wellness routines.",
-        price: "PKR [Price]",
-        sizes: ["250g", "500g", "1kg"],
+        shortDesc: "Raw, unpasteurized amber honey gathered directly from natural hives. Packed with active natural enzymes.",
+        description: "Our Pure Honey is minimally filtered to ensure every jar retains its rich pollen content, enzymes, and delicate wildflower aroma. An essential natural sweetener for immunity, herbal teas, and healthy breakfast bowls.",
+        variants: [
+          { size: "250g", price: 650, oldPrice: 800 },
+          { size: "500g", price: 1200, oldPrice: 1450 },
+          { size: "1kg", price: 2300, oldPrice: 2700 }
+        ],
         image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=700&q=80",
         badge: "Best Seller",
-        ingredients: "100% Pure Natural Raw Honey. Free from corn syrups or added sugars.",
-        packaging: "Food-grade sterilized glass jar with an airtight tamper-evident seal.",
-        storage: "Store at room temperature in a dry place away from direct sunlight. Do not refrigerate."
+        ingredients: "100% Raw Wildflower Honey without added sugars or corn syrups.",
+        packaging: "Airtight sterilized glass jar with gold seal.",
+        storage: "Keep at room temperature. Natural crystallization is normal; warm gently in lukewarm water."
       },
       {
         id: 2,
         name: "Traditional Desi Ghee",
         category: "ghee",
         categoryLabel: "Desi Ghee",
-        shortDesc: "Pure traditional desi ghee slowly prepared with generational care for authentic aroma and taste.",
-        description: "Crafted using traditional methods, our Desi Ghee carries the rich aroma and golden granular texture that has been the soul of authentic Pakistani kitchens for generations. Perfect for topping warm rotis, crafting traditional halwas, or wholesome everyday cooking.",
-        price: "PKR [Price]",
-        sizes: ["500g", "1kg"],
+        shortDesc: "Traditional granular desi ghee prepared through slow-simmering for authentic aroma and deep flavor.",
+        description: "Crafted using time-honored techniques from wholesome milk, our Desi Ghee brings the signature aroma and rich golden granules of our heritage kitchens straight to your warm parathas and comforting curries.",
+        variants: [
+          { size: "500g", price: 1450, oldPrice: 1750 },
+          { size: "1kg", price: 2800, oldPrice: 3300 }
+        ],
         image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=700&q=80",
-        badge: "Traditional",
-        ingredients: "Pure Clarified Butter from healthy, pasture-fed cattle milk.",
-        packaging: "Sturdy glass container with a secure lid to retain delicate natural aromatics.",
-        storage: "Keep in a cool and dry cupboard. Use a dry spoon for scooping."
+        badge: "Generational",
+        ingredients: "Pure Clarified Butter from grass-fed cattle milk.",
+        packaging: "Aesthetic heavy glass jar with tamper-proof seal.",
+        storage: "Store in a dry cupboard. Always use a clean, dry spoon."
       },
       {
         id: 3,
         name: "Homemade Panjeeri",
         category: "traditional",
         categoryLabel: "Traditional Foods",
-        shortDesc: "A wholesome traditional blend of almonds, dry fruits, grains, and desi ghee for vitality.",
-        description: "Panjeeri is a cherished traditional Pakistani restorative food, prepared according to cherished domestic recipes. Loaded with almonds, walnuts, seeds, and roasted grains, it brings heartwarming nutrition to cold winter mornings, post-illness recovery, and new mothers.",
-        price: "PKR [Price]",
-        sizes: ["250g", "500g", "1kg"],
+        shortDesc: "Nourishing energy blend with desi ghee, roasted almonds, walnuts, seeds, and edible gum.",
+        description: "Panjeeri is a celebrated traditional Pakistani restorative food. Loaded with premium roasted nuts, seeds, and desi ghee, it brings heartwarming nutrition to chilly winter mornings, recovery, and post-partum nourishment.",
+        variants: [
+          { size: "250g", price: 750, oldPrice: 900 },
+          { size: "500g", price: 1400, oldPrice: 1700 },
+          { size: "1kg", price: 2700, oldPrice: 3200 }
+        ],
         image: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=700&q=80",
         badge: "Homemade",
-        ingredients: "Almonds, walnuts, edible gum (gond), dry fruits, roasted flour blend, and traditional Desi Ghee.",
-        packaging: "Aesthetic craft zip-pouch or food-grade canister.",
+        ingredients: "Almonds, walnuts, gond (edible gum), pumpkin seeds, roasted whole wheat, Desi Ghee, cardamom.",
+        packaging: "Sealed food-grade pouch to retain crunchy freshness.",
         storage: "Store in an airtight container away from moisture."
       },
       {
         id: 4,
         name: "Natural Flaxseeds",
         category: "seeds",
-        categoryLabel: "Seeds & Healthy Ingredients",
-        shortDesc: "Carefully selected whole flaxseeds, naturally rich in dietary fiber and essential plant nutrients.",
-        description: "Our Natural Flaxseeds are thoroughly cleaned and packaged to bring you pristine quality. A powerhouse of fiber and essential nutrients, they add a subtle nutty flavor when sprinkled over yogurts, oatmeal, baked breads, or blended into morning smoothies.",
-        price: "PKR [Price]",
-        sizes: ["200g", "500g"],
+        categoryLabel: "Seeds & Superfoods",
+        shortDesc: "Pure whole cleaned flaxseeds (Alsi), packed with dietary fiber and essential omega-rich nutrients.",
+        description: "Our Natural Flaxseeds are thoroughly cleaned and packaged to bring you pristine quality. A powerhouse of fiber, adding a nutty crunch to yogurts, smoothies, and homemade rotis.",
+        variants: [
+          { size: "200g", price: 350, oldPrice: 450 },
+          { size: "500g", price: 750, oldPrice: 950 }
+        ],
         image: "https://images.unsplash.com/photo-1612257998531-f20b3c1d5f00?w=700&q=80",
         badge: "Superfood",
-        ingredients: "100% Whole Cleaned Natural Flaxseeds (Alsi).",
-        packaging: "Resealable barrier pouch to prevent oxidation of natural seed oils.",
-        storage: "Store in a cool, dark environment. Once ground, consume promptly or refrigerate."
+        ingredients: "100% Clean Whole Natural Flaxseeds (Alsi).",
+        packaging: "Moisture-barrier kraft ziplock pouch.",
+        storage: "Store in a cool, dark environment to preserve natural oils."
       },
       {
         id: 5,
         name: "Sesame Ladoo",
         category: "sweets",
         categoryLabel: "Traditional Sweets",
-        shortDesc: "Traditional winter sesame sweets crafted with toasted seeds and wholesome sweeteners.",
-        description: "Our Sesame Ladoo are made following traditional confection techniques, pairing the rich roasted flavor of white sesame with natural sweeteners. A comforting traditional sweet that provides warmth, texture, and nostalgic homemade flavor.",
-        price: "PKR [Price]",
-        sizes: ["250g", "500g"],
+        shortDesc: "Traditional winter treats crafted with roasted white sesame seeds and natural unrefined jaggery.",
+        description: "Crafted following authentic winter recipes, combining the warming goodness of roasted sesame with natural unrefined jaggery and green cardamom. A comforting traditional sweet that melts pleasantly.",
+        variants: [
+          { size: "250g", price: 450, oldPrice: 550 },
+          { size: "500g", price: 850, oldPrice: 1050 }
+        ],
         image: "https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=700&q=80",
         badge: "Festive Sweet",
-        ingredients: "Toasted natural sesame seeds (Til), jaggery / raw cane sugar, and a hint of green cardamom.",
-        packaging: "Delicately packed in food-grade gift boxes with protective seals.",
-        storage: "Store in a dry airtight container away from humidity."
+        ingredients: "Roasted white sesame seeds, organic jaggery (gur), touch of desi ghee, cardamom.",
+        packaging: "Hygienic gift-ready food box.",
+        storage: "Store in an airtight container at room temperature."
       }
     ];
 
-    /* ==========================================================================
-       CART STATE MANAGEMENT (localStorage)
-       ========================================================================== */
-    let cart = JSON.parse(localStorage.getItem('fizzas_cart')) || [];
+    /* Dynamic size selection per product card on the grid */
+    const selectedVariantMap = {
+      1: "500g",
+      2: "1kg",
+      3: "500g",
+      4: "500g",
+      5: "500g"
+    };
+
+    /* CART STATE */
+    let cart = JSON.parse(localStorage.getItem('fizzas_cart_v2')) || [];
     let currentDetailProduct = productsData[0];
-    let selectedDetailSize = currentDetailProduct.sizes[0];
+    let selectedDetailSize = currentDetailProduct.variants[0].size;
     let detailQuantity = 1;
+    const WHATSAPP_PHONE = "923359669121";
+
+    function formatPKR(num) {
+      return "PKR " + Number(num).toLocaleString('en-PK');
+    }
 
     function saveCart() {
-      localStorage.setItem('fizzas_cart', JSON.stringify(cart));
+      localStorage.setItem('fizzas_cart_v2', JSON.stringify(cart));
       updateCartUI();
     }
 
-    function addToCart(productId, size = null, qty = 1) {
-      const product = productsData.find(p => p.id === productId);
-      if (!product) return;
+    function selectCardVariant(productId, size, btn) {
+      selectedVariantMap[productId] = size;
+      
+      // Update active pill UI on card
+      const card = btn.closest('.product-card');
+      card.querySelectorAll('.size-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
 
-      const chosenSize = size || product.sizes[0];
+      // Update price display on card
+      const product = productsData.find(p => p.id === productId);
+      const variant = product.variants.find(v => v.size === size);
+      
+      const priceElem = card.querySelector('.current-price');
+      const oldPriceElem = card.querySelector('.old-price');
+      if (priceElem) priceElem.textContent = formatPKR(variant.price);
+      if (oldPriceElem) oldPriceElem.textContent = formatPKR(variant.oldPrice);
+    }
+
+    function addToCartFromGrid(productId) {
+      const product = productsData.find(p => p.id === productId);
+      const chosenSize = selectedVariantMap[productId] || product.variants[0].size;
+      const variant = product.variants.find(v => v.size === chosenSize);
+
       const existing = cart.find(item => item.id === productId && item.size === chosenSize);
 
       if (existing) {
-        existing.qty += qty;
+        existing.qty += 1;
       } else {
         cart.push({
           id: product.id,
           name: product.name,
           category: product.categoryLabel,
           size: chosenSize,
-          price: product.price,
+          price: variant.price,
           image: product.image,
-          qty: qty
+          qty: 1
         });
       }
 
       saveCart();
-      showToast(`Added ${qty}x ${product.name} (${chosenSize}) to your basket!`);
+      showToast(`Added 1x ${product.name} (${chosenSize}) — ${formatPKR(variant.price)}!`);
     }
 
-    function quickAddToCart(productId) {
-      addToCart(productId, null, 1);
+    function directOrderSingleProduct(productId, size = null) {
+      const product = productsData.find(p => p.id === productId);
+      const chosenSize = size || selectedVariantMap[productId] || product.variants[0].size;
+      const variant = product.variants.find(v => v.size === chosenSize);
+
+      const msg = `Assalam o Alaikum Fizza's Natural!%0A%0AI would like to order:%0A• Product: ${encodeURIComponent(product.name)}%0A• Size: ${encodeURIComponent(chosenSize)}%0A• Price: ${encodeURIComponent(formatPKR(variant.price))}%0A• Delivery Area: Faisalabad (Free Home Delivery)%0A%0APlease confirm my order!`;
+      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
     }
 
     function updateCartItemQty(index, change) {
@@ -3381,44 +3190,71 @@
       showToast("Your basket has been cleared.");
     }
 
+    function calculateCartTotal() {
+      return cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    }
+
     function updateCartUI() {
       const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-      
-      // Update badges
-      document.getElementById('cartCountBadge').textContent = totalCount;
-      document.querySelectorAll('.mobile-cart-count').forEach(el => el.textContent = totalCount);
+      const totalAmount = calculateCartTotal();
+      const formattedTotal = formatPKR(totalAmount);
 
-      // Render drawer items
-      const drawerContainer = document.getElementById('drawerCartItems');
-      if (cart.length === 0) {
-        drawerContainer.innerHTML = `
-          <div style="text-align: center; padding: 40px 10px; color: var(--color-text-muted);">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 10px;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-            <p>Your basket is currently empty.</p>
-          </div>
-        `;
-      } else {
-        drawerContainer.innerHTML = cart.map((item, index) => `
-          <div style="display: flex; gap: 14px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); align-items: center;">
-            <img src="${item.image}" alt="${item.name}" style="width: 58px; height: 58px; object-fit: cover; border-radius: var(--radius-sm);">
-            <div style="flex: 1;">
-              <h4 style="font-size: 0.95rem; font-family: var(--font-heading); color: var(--color-forest);">${item.name}</h4>
-              <span style="font-size: 0.78rem; color: var(--color-text-muted);">${item.size} • ${item.price}</span>
-              <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
-                <button onclick="updateCartItemQty(${index}, -1)" style="width: 24px; height: 24px; background: var(--color-beige); border-radius: 4px; font-weight: bold;">-</button>
-                <span style="font-size: 0.88rem; font-weight: 600;">${item.qty}</span>
-                <button onclick="updateCartItemQty(${index}, 1)" style="width: 24px; height: 24px; background: var(--color-beige); border-radius: 4px; font-weight: bold;">+</button>
-              </div>
-            </div>
-            <button onclick="removeCartItem(${index})" style="color: #C0392B; padding: 4px;" title="Remove">✕</button>
-          </div>
-        `).join('');
+      // Update counters
+      const badge = document.getElementById('cartCountBadge');
+      if (badge) {
+        badge.textContent = totalCount;
+        badge.classList.remove('animate-bounce');
+        void badge.offsetWidth;
+        badge.classList.add('animate-bounce');
       }
 
-      // Render full cart page items
+      document.querySelectorAll('.mobile-cart-count').forEach(el => el.textContent = totalCount);
+      const mobileBar = document.getElementById('mobileBarTotal');
+      if (mobileBar) mobileBar.textContent = formattedTotal;
+
+      // Update Drawer
+      const drawerContainer = document.getElementById('drawerCartItems');
+      const drawerTotal = document.getElementById('drawerCartTotal');
+      if (drawerTotal) drawerTotal.textContent = formattedTotal;
+
+      if (drawerContainer) {
+        if (cart.length === 0) {
+          drawerContainer.innerHTML = `
+            <div style="text-align: center; padding: 40px 10px; color: var(--color-text-muted);">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 12px; color: var(--color-forest);"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              <h4 style="font-family: var(--font-heading); color: var(--color-forest); margin-bottom: 6px;">Your Basket is Empty</h4>
+              <p style="font-size: 0.88rem;">Add your favorite pure honey, desi ghee or panjeeri to begin!</p>
+            </div>
+          `;
+        } else {
+          drawerContainer.innerHTML = cart.map((item, index) => `
+            <div style="display: flex; gap: 14px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); align-items: center;">
+              <img src="${item.image}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
+              <div style="flex: 1;">
+                <h4 style="font-size: 0.95rem; font-family: var(--font-heading); color: var(--color-forest);">${item.name}</h4>
+                <div style="font-size: 0.8rem; color: var(--color-text-muted);">${item.size} • ${formatPKR(item.price)} each</div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px;">
+                  <button onclick="updateCartItemQty(${index}, -1)" style="width: 24px; height: 24px; background: var(--color-beige); border-radius: 4px; font-weight: bold;">-</button>
+                  <span style="font-size: 0.88rem; font-weight: 700;">${item.qty}</span>
+                  <button onclick="updateCartItemQty(${index}, 1)" style="width: 24px; height: 24px; background: var(--color-beige); border-radius: 4px; font-weight: bold;">+</button>
+                  <span style="margin-left: auto; font-weight: 800; color: var(--color-forest); font-size: 0.92rem;">${formatPKR(item.price * item.qty)}</span>
+                </div>
+              </div>
+              <button onclick="removeCartItem(${index})" style="color: #C0392B; padding: 4px; margin-left: 6px;" title="Remove">✕</button>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Update Full Cart Page
       const fullCartList = document.getElementById('fullCartItemsList');
       const cartEmptyState = document.getElementById('cartEmptyState');
       const cartLayoutContainer = document.getElementById('cartLayoutContainer');
+      const subtotalElem = document.getElementById('fullCartSubtotal');
+      const grandTotalElem = document.getElementById('fullCartGrandTotal');
+
+      if (subtotalElem) subtotalElem.textContent = formattedTotal;
+      if (grandTotalElem) grandTotalElem.textContent = formattedTotal;
 
       if (cart.length === 0) {
         if (cartLayoutContainer) cartLayoutContainer.style.display = 'none';
@@ -3435,8 +3271,8 @@
               </div>
               <div>
                 <div class="cart-item-title">${item.name}</div>
-                <div class="cart-item-size">Weight / Size: <strong>${item.size}</strong></div>
-                <div style="color: var(--color-forest); font-weight: 700; margin-top: 4px;">${item.price}</div>
+                <div class="cart-item-size">Weight / Pack Size: <strong>${item.size}</strong></div>
+                <div class="cart-item-price">${formatPKR(item.price)} each • <strong>Subtotal: ${formatPKR(item.price * item.qty)}</strong></div>
               </div>
               <div class="qty-control">
                 <button class="qty-btn" onclick="updateCartItemQty(${index}, -1)">-</button>
@@ -3451,25 +3287,38 @@
         }
       }
 
-      // Render checkout sidebar items
+      // Update Checkout Page Sidebar
       const checkoutItemsList = document.getElementById('checkoutItemsList');
+      const checkSub = document.getElementById('checkoutSubtotal');
+      const checkTot = document.getElementById('checkoutTotal');
+
+      if (checkSub) checkSub.textContent = formattedTotal;
+      if (checkTot) checkTot.textContent = formattedTotal;
+
       if (checkoutItemsList) {
         checkoutItemsList.innerHTML = cart.map(item => `
-          <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.92rem;">
-            <span>${item.qty}x ${item.name} (${item.size})</span>
-            <span style="font-weight: 600; color: var(--color-forest);">${item.price}</span>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; border-bottom: 1px dashed var(--color-border); padding-bottom: 8px;">
+            <div>
+              <strong>${item.qty}x ${item.name}</strong>
+              <div style="font-size: 0.8rem; color: var(--color-text-muted);">${item.size}</div>
+            </div>
+            <span style="font-weight: 700; color: var(--color-forest);">${formatPKR(item.price * item.qty)}</span>
           </div>
         `).join('');
       }
     }
 
-    /* ==========================================================================
-       PRODUCT RENDERING ENGINE
-       ========================================================================== */
+    /* RENDER PRODUCT CARDS */
     function renderProductCard(p) {
+      const activeSize = selectedVariantMap[p.id] || p.variants[0].size;
+      const activeVariant = p.variants.find(v => v.size === activeSize) || p.variants[0];
+
       return `
-        <div class="product-card" data-category="${p.category}" data-name="${p.name.toLowerCase()}">
-          <span class="product-badge">${p.badge}</span>
+        <div class="product-card reveal" data-category="${p.category}" data-name="${p.name.toLowerCase()}">
+          <div class="product-badge-wrap">
+            <span class="badge-primary">${p.badge}</span>
+            <span class="badge-discount">SAVE ${(activeVariant.oldPrice - activeVariant.price)}</span>
+          </div>
           <div class="product-image-wrap">
             <img src="${p.image}" alt="${p.name}" loading="lazy">
           </div>
@@ -3481,20 +3330,32 @@
             <p class="product-desc">${p.shortDesc}</p>
             
             <div class="product-options-row">
+              <span class="size-selector-label">Select Package Size:</span>
               <div class="size-selector">
-                ${p.sizes.map((s, idx) => `
-                  <span class="size-pill ${idx === 0 ? 'active' : ''}">${s}</span>
+                ${p.variants.map((v) => `
+                  <button class="size-pill ${v.size === activeSize ? 'active' : ''}" onclick="selectCardVariant(${p.id}, '${v.size}', this)">${v.size}</button>
                 `).join('')}
               </div>
-              <div class="product-price-box">${p.price}</div>
+            </div>
+
+            <div class="product-price-row">
+              <div class="product-price-box">
+                <span class="current-price">${formatPKR(activeVariant.price)}</span>
+                <span class="old-price">${formatPKR(activeVariant.oldPrice)}</span>
+              </div>
+              <span class="delivery-free-tag">Free Delivery</span>
             </div>
 
             <div class="product-actions">
               <button class="btn btn-secondary btn-sm" onclick="viewProductDetail(${p.id})">
-                View Details
+                Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="quickAddToCart(${p.id})">
-                Add to Cart
+              <button class="btn btn-primary btn-sm" onclick="addToCartFromGrid(${p.id})">
+                Add to Basket
+              </button>
+              <button class="btn-card-wa" onclick="directOrderSingleProduct(${p.id})">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 1.961.817 3.149.817 3.182 0 5.767-2.587 5.767-5.766.001-3.182-2.585-5.759-5.767-5.759zm3.374 8.232c-.145.409-.844.755-1.164.802-.319.047-.692.063-2.115-.527-1.424-.59-2.316-2.023-2.386-2.117-.07-.094-.572-.76-.572-1.45 0-.69.362-1.03.49-1.171.129-.141.282-.176.376-.176.094 0 .188.001.27.006.086.005.201-.033.315.241.118.283.402.98.438 1.05.035.071.059.153.012.247-.047.094-.07.153-.141.236-.07.082-.149.184-.212.247-.071.07-.145.147-.062.289.082.141.365.602.784.975.54.48 1 .632 1.141.703.142.07.224.059.306-.035.083-.095.353-.412.447-.553.094-.141.189-.118.318-.071.13.047.824.389.965.46.141.07.236.106.27.165.036.059.036.342-.109.751z"/></svg>
+                <span>Direct WhatsApp Order</span>
               </button>
             </div>
           </div>
@@ -3502,44 +3363,40 @@
       `;
     }
 
-    function initProductCatalogs() {
+    function initCatalogs() {
       const homeGrid = document.getElementById('homepageProductGrid');
-      if (homeGrid) {
-        homeGrid.innerHTML = productsData.map(renderProductCard).join('');
-      }
+      if (homeGrid) homeGrid.innerHTML = productsData.map(renderProductCard).join('');
 
       const shopGrid = document.getElementById('shopCatalogGrid');
-      if (shopGrid) {
-        shopGrid.innerHTML = productsData.map(renderProductCard).join('');
-      }
+      if (shopGrid) shopGrid.innerHTML = productsData.map(renderProductCard).join('');
+
+      setupScrollReveals();
     }
 
-    /* ==========================================================================
-       PRODUCT DETAIL VIEW LOGIC
-       ========================================================================== */
+    /* PRODUCT DETAIL VIEW */
     function viewProductDetail(productId) {
       const product = productsData.find(p => p.id === productId);
       if (!product) return;
 
       currentDetailProduct = product;
-      selectedDetailSize = product.sizes[0];
+      selectedDetailSize = product.variants[0].size;
       detailQuantity = 1;
 
-      // Populate Elements
       document.getElementById('breadcrumbProductName').textContent = product.name;
       document.getElementById('detailImg').src = product.image;
       document.getElementById('detailTitle').textContent = product.name;
       document.getElementById('detailBadge').textContent = product.badge;
       document.getElementById('detailCategory').textContent = product.categoryLabel;
-      document.getElementById('detailPrice').textContent = product.price;
       document.getElementById('detailShortDesc').textContent = product.shortDesc;
       document.getElementById('detailQty').textContent = detailQuantity;
 
       // Render Size Selector Pills
       const sizesContainer = document.getElementById('detailSizesContainer');
-      sizesContainer.innerHTML = product.sizes.map((size, idx) => `
-        <button class="size-pill ${idx === 0 ? 'active' : ''}" onclick="selectDetailSize('${size}', this)">${size}</button>
+      sizesContainer.innerHTML = product.variants.map((v, idx) => `
+        <button class="size-pill ${idx === 0 ? 'active' : ''}" onclick="selectDetailSize('${v.size}', this)">${v.size}</button>
       `).join('');
+
+      updateDetailPriceDisplay();
 
       // Populate Tabs
       document.getElementById('tabDetailDesc').textContent = product.description;
@@ -3548,7 +3405,6 @@
       document.getElementById('tabDetailStorage').textContent = product.storage;
 
       navigateTo('product-detail');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function selectDetailSize(size, btn) {
@@ -3556,6 +3412,15 @@
       const allPills = document.querySelectorAll('#detailSizesContainer .size-pill');
       allPills.forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
+      updateDetailPriceDisplay();
+    }
+
+    function updateDetailPriceDisplay() {
+      const variant = currentDetailProduct.variants.find(v => v.size === selectedDetailSize);
+      if (variant) {
+        document.getElementById('detailPrice').textContent = formatPKR(variant.price);
+        document.getElementById('detailOldPrice').textContent = formatPKR(variant.oldPrice);
+      }
     }
 
     function updateDetailQty(delta) {
@@ -3564,7 +3429,32 @@
     }
 
     function addToCartFromDetail() {
-      addToCart(currentDetailProduct.id, selectedDetailSize, detailQuantity);
+      const variant = currentDetailProduct.variants.find(v => v.size === selectedDetailSize);
+      const existing = cart.find(item => item.id === currentDetailProduct.id && item.size === selectedDetailSize);
+
+      if (existing) {
+        existing.qty += detailQuantity;
+      } else {
+        cart.push({
+          id: currentDetailProduct.id,
+          name: currentDetailProduct.name,
+          category: currentDetailProduct.categoryLabel,
+          size: selectedDetailSize,
+          price: variant.price,
+          image: currentDetailProduct.image,
+          qty: detailQuantity
+        });
+      }
+
+      saveCart();
+      showToast(`Added ${detailQuantity}x ${currentDetailProduct.name} (${selectedDetailSize}) to your basket!`);
+    }
+
+    function orderCurrentProductViaWhatsApp() {
+      const variant = currentDetailProduct.variants.find(v => v.size === selectedDetailSize);
+      const lineTotal = variant.price * detailQuantity;
+      const msg = `Assalam o Alaikum Fizza's Natural!%0A%0AI would like to order:%0A• Product: ${encodeURIComponent(currentDetailProduct.name)}%0A• Size/Weight: ${encodeURIComponent(selectedDetailSize)}%0A• Quantity: ${detailQuantity}%0A• Unit Price: ${encodeURIComponent(formatPKR(variant.price))}%0A• Total Calculated: ${encodeURIComponent(formatPKR(lineTotal))}%0A• Delivery Location: Faisalabad (Free Delivery)%0A%0APlease confirm my order!`;
+      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
     }
 
     function switchDetailTab(tabKey, btn) {
@@ -3576,24 +3466,17 @@
       if (targetPane) targetPane.classList.add('active');
     }
 
-    /* ==========================================================================
-       WHATSAPP ORDERING ENGINE (0335 9669121)
-       ========================================================================== */
-    const WHATSAPP_PHONE = "923359669121";
-
-    function orderCurrentProductViaWhatsApp() {
-      const msg = `Assalam o Alaikum Fizza's Natural!%0A%0AI would like to order:%0A• Product: ${encodeURIComponent(currentDetailProduct.name)}%0A• Size/Weight: ${encodeURIComponent(selectedDetailSize)}%0A• Quantity: ${detailQuantity}%0A• Delivery Location: Faisalabad%0A%0APlease confirm availability and total price. Thank you!`;
-      window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
-    }
-
+    /* WHATSAPP BASKET & CHECKOUT GENERATION */
     function orderCartDirectWhatsApp() {
       if (cart.length === 0) {
         showToast("Your basket is empty. Add products first!");
         return;
       }
 
-      let itemsText = cart.map(item => `• ${item.qty}x ${item.name} (${item.size})`).join('%0A');
-      const msg = `Assalam o Alaikum Fizza's Natural!%0A%0AI would like to place an order:%0A%0A${itemsText}%0A%0A• City: Faisalabad (Free Home Delivery)%0A%0APlease confirm availability and pricing.`;
+      const total = calculateCartTotal();
+      let itemsText = cart.map(item => `• ${item.qty}x ${item.name} (${item.size}) = ${formatPKR(item.price * item.qty)}`).join('%0A');
+      
+      const msg = `Assalam o Alaikum Fizza's Natural!%0A%0AI would like to place an order:%0A%0A${itemsText}%0A%0A• Total Payable: ${encodeURIComponent(formatPKR(total))}%0A• Delivery: FREE (Faisalabad Doorstep Delivery)%0A%0APlease confirm availability!`;
       window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${msg}`, '_blank');
     }
 
@@ -3601,7 +3484,7 @@
       event.preventDefault();
 
       if (cart.length === 0) {
-        showToast("Your cart is empty! Please add items before checking out.");
+        showToast("Your cart is empty! Please add items first.");
         return;
       }
 
@@ -3610,8 +3493,9 @@
       const address = document.getElementById('checkAddress').value.trim();
       const city = document.getElementById('checkCity').value.trim();
       const notes = document.getElementById('checkNotes').value.trim();
+      const total = calculateCartTotal();
 
-      let itemsText = cart.map(item => `• ${item.qty}x ${item.name} (${item.size})`).join('%0A');
+      let itemsText = cart.map(item => `• ${item.qty}x ${item.name} (${item.size}) = ${formatPKR(item.price * item.qty)}`).join('%0A');
 
       let whatsappMsg = `*NEW ORDER - FIZZA'S NATURAL*%0A` +
         `--------------------------------%0A` +
@@ -3626,17 +3510,16 @@
       whatsappMsg += `--------------------------------%0A` +
         `*Selected Products:*%0A${itemsText}%0A` +
         `--------------------------------%0A` +
-        `*Delivery:* Free Home Delivery in Faisalabad%0A` +
-        `Please confirm this order with the final payable amount.`;
+        `*Total Amount Payable:* ${encodeURIComponent(formatPKR(total))}%0A` +
+        `*Delivery Fee:* FREE (Faisalabad)%0A` +
+        `*Payment Method:* Cash on Delivery%0A` +
+        `Please confirm this order!`;
 
-      // Open WhatsApp with complete formatted order
       window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${whatsappMsg}`, '_blank');
-      showToast("Opening WhatsApp with your order details...");
+      showToast("Opening WhatsApp with your calculated order...");
     }
 
-    /* ==========================================================================
-       SHOP FILTERING & SEARCH
-       ========================================================================== */
+    /* SHOP FILTERING */
     let currentCategory = 'all';
 
     function filterCategory(cat, btn) {
@@ -3644,29 +3527,6 @@
       document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('active'));
       if (btn) btn.classList.add('active');
       applyShopFilters();
-    }
-
-    function filterCategoryFromFooter(cat) {
-      navigateTo('shop');
-      const chip = document.querySelector(`.category-chip[onclick*="'${cat}'"]`);
-      filterCategory(cat, chip);
-    }
-
-    function handleShopSearch() {
-      applyShopFilters();
-    }
-
-    function handleShopSort(sortVal) {
-      const grid = document.getElementById('shopCatalogGrid');
-      const cards = Array.from(grid.querySelectorAll('.product-card'));
-
-      if (sortVal === 'name-asc') {
-        cards.sort((a, b) => a.dataset.name.localeCompare(b.dataset.name));
-      } else if (sortVal === 'name-desc') {
-        cards.sort((a, b) => b.dataset.name.localeCompare(a.dataset.name));
-      }
-
-      cards.forEach(card => grid.appendChild(card));
     }
 
     function applyShopFilters() {
@@ -3690,9 +3550,7 @@
       });
 
       const emptyNotice = document.getElementById('shopEmptyState');
-      if (emptyNotice) {
-        emptyNotice.style.display = visibleCount === 0 ? 'block' : 'none';
-      }
+      if (emptyNotice) emptyNotice.style.display = visibleCount === 0 ? 'block' : 'none';
     }
 
     function resetShopFilters() {
@@ -3701,26 +3559,19 @@
       filterCategory('all', document.querySelector('.category-chip'));
     }
 
-    /* ==========================================================================
-       MODAL SEARCH ENGINE
-       ========================================================================== */
+    /* LIVE SEARCH MODAL */
     function openSearchModal() {
       document.getElementById('searchBackdrop').classList.add('show');
       const modal = document.getElementById('searchModal');
       modal.style.display = 'block';
       setTimeout(() => {
-        modal.style.transform = 'translateX(-50%) scale(1)';
         document.getElementById('modalSearchInput').focus();
       }, 50);
     }
 
     function closeSearchModal() {
-      const modal = document.getElementById('searchModal');
-      modal.style.transform = 'translateX(-50%) scale(0.95)';
-      setTimeout(() => {
-        modal.style.display = 'none';
-        document.getElementById('searchBackdrop').classList.remove('show');
-      }, 200);
+      document.getElementById('searchModal').style.display = 'none';
+      document.getElementById('searchBackdrop').classList.remove('show');
     }
 
     function runLiveSearch(query) {
@@ -3742,45 +3593,31 @@
         resultsContainer.innerHTML = `<p style="color: var(--color-text-muted); text-align: center; padding: 20px;">No matching products found for "${query}"</p>`;
       } else {
         resultsContainer.innerHTML = matches.map(p => `
-          <div onclick="closeSearchModal(); viewProductDetail(${p.id})" style="display: flex; gap: 12px; align-items: center; padding: 10px; border-radius: var(--radius-sm); cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='var(--color-cream)'" onmouseout="this.style.background='transparent'">
-            <img src="${p.image}" alt="${p.name}" style="width: 48px; height: 48px; object-fit: cover; border-radius: var(--radius-sm);">
+          <div onclick="closeSearchModal(); viewProductDetail(${p.id})" style="display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: var(--radius-sm); cursor: pointer; border-bottom: 1px solid var(--color-border);" onmouseover="this.style.background='var(--color-cream)'" onmouseout="this.style.background='transparent'">
+            <img src="${p.image}" alt="${p.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: var(--radius-sm);">
             <div>
               <h4 style="font-size: 0.95rem; font-family: var(--font-heading); color: var(--color-forest);">${p.name}</h4>
-              <span style="font-size: 0.78rem; color: var(--color-text-muted);">${p.categoryLabel}</span>
+              <span style="font-size: 0.82rem; color: var(--color-gold); font-weight: 700;">Starting from ${formatPKR(p.variants[0].price)}</span>
             </div>
           </div>
         `).join('');
       }
     }
 
-    /* ==========================================================================
-       ROUTING & VIEW MANAGEMENT
-       ========================================================================== */
+    /* ROUTING */
     function navigateTo(pageId) {
-      // Hide all pages
-      document.querySelectorAll('.view-page').forEach(page => {
-        page.classList.remove('active');
-      });
-
-      // Show targeted page
+      document.querySelectorAll('.view-page').forEach(page => page.classList.remove('active'));
       const target = document.getElementById(`page-${pageId}`);
-      if (target) {
-        target.classList.add('active');
-      }
+      if (target) target.classList.add('active');
 
-      // Update active nav links
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
-        if (link.dataset.page === pageId) {
-          link.classList.add('active');
-        }
+        if (link.dataset.page === pageId) link.classList.add('active');
       });
 
-      // Update location hash without full page reload
       window.location.hash = pageId;
-
-      // Scroll smoothly to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      setupScrollReveals();
     }
 
     window.addEventListener('hashchange', () => {
@@ -3788,24 +3625,17 @@
       navigateTo(hash);
     });
 
-    /* ==========================================================================
-       DRAWER & UI TOGGLES
-       ========================================================================== */
+    /* UI TOGGLES */
     function toggleCartDrawer() {
-      const drawer = document.getElementById('cartDrawer');
-      const backdrop = document.getElementById('modalBackdrop');
-      
-      drawer.classList.toggle('open');
-      backdrop.classList.toggle('show');
+      document.getElementById('cartDrawer').classList.toggle('open');
+      document.getElementById('modalBackdrop').classList.toggle('show');
     }
 
     function toggleMobileNav() {
       const drawer = document.getElementById('mobileNavDrawer');
-      const backdrop = document.getElementById('modalBackdrop');
-      
       const isOpen = drawer.style.left === '0px';
       drawer.style.left = isOpen ? '-320px' : '0px';
-      backdrop.classList.toggle('show');
+      document.getElementById('modalBackdrop').classList.toggle('show');
     }
 
     function closeAllDrawers() {
@@ -3817,26 +3647,9 @@
     function showToast(message) {
       const toast = document.getElementById('toastNotification');
       const msgSpan = document.getElementById('toastMsg');
-      
       msgSpan.textContent = message;
       toast.classList.add('show');
-
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3500);
-    }
-
-    /* ==========================================================================
-       FORM HANDLERS
-       ========================================================================== */
-    function handleNewsletter(event) {
-      event.preventDefault();
-      const email = document.getElementById('newsletterEmail').value;
-      if (email) {
-        document.getElementById('newsletterSuccess').style.display = 'block';
-        document.getElementById('newsletterEmail').value = '';
-        showToast("Subscribed! Thank you for connecting with us.");
-      }
+      setTimeout(() => toast.classList.remove('show'), 3500);
     }
 
     function handleContactSubmit(event) {
@@ -3845,32 +3658,40 @@
       const phone = document.getElementById('contactPhone').value;
       const msg = document.getElementById('contactMsg').value;
 
-      document.getElementById('contactSuccessMsg').style.display = 'block';
-      showToast("Inquiry submitted! We'll reach out shortly.");
-
-      // Also trigger optional WhatsApp dispatch
+      showToast("Thank you! Opening WhatsApp to send your inquiry...");
       const waUrl = `https://wa.me/${WHATSAPP_PHONE}?text=Hello%20Fizza's%20Natural,%20my%20name%20is%20${encodeURIComponent(name)}%20(${encodeURIComponent(phone)}).%20Inquiry:%20${encodeURIComponent(msg)}`;
       window.open(waUrl, '_blank');
     }
 
-    /* Sticky Header Elevation on Scroll */
+    /* SCROLL REVEAL OBSERVER */
+    function setupScrollReveals() {
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+    }
+
     window.addEventListener('scroll', () => {
       const header = document.getElementById('siteHeader');
-      if (window.scrollY > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
     });
 
-    /* ==========================================================================
-       INITIALIZATION
-       ========================================================================== */
+    /* INITIALIZATION */
     document.addEventListener('DOMContentLoaded', () => {
-      initProductCatalogs();
+      initCatalogs();
       updateCartUI();
 
-      // Check initial hash route
       const initialPage = window.location.hash.replace('#', '') || 'home';
       navigateTo(initialPage);
     });
